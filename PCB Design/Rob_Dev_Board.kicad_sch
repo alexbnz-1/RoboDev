@@ -1,0 +1,19 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "16424436-3301-4b70-a698-6c981baa083e")
+	(paper "A3")
+	(title_block
+		(title "Robotics ESP32 Development Board")
+		(date "2025-10-21")
+		(rev "1")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
