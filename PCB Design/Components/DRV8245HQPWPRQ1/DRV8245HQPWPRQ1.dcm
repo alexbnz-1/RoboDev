@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8245HQPWPRQ1
+D Motor / Motion / Ignition Controllers & Drivers Automotive 40-V, 32-A H-Bridge driver with integrated current sensing and feedback 28-HTSSOP -40 to 125
+K
+F https://www.ti.com/lit/ds/symlink/drv8245-q1.pdf?ts=1733801449058&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FDRV8245-Q1%252Fpart-details%252FDRV8245HQPWPRQ1
+$ENDCMP
+#
+#End Doc Library

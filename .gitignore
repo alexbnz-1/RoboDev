@@ -39,10 +39,28 @@ fp-info-cache
 # Local project settings
 *.kicad_prl
 
-#Overall files
-
-
-#ignore .DS_Store files
+# =========================
+# macOS / OS-specific
+# =========================
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
 .DS_Store
 
+# =========================
+# PlatformIO / Arduino build artifacts
+# =========================
+/.pio/
+/pioenvs/
+/.vscode/
 
+# =========================
+# General temp / editor files
+# =========================
+*.log
+*.tmp
+*.swp
+*.swo
