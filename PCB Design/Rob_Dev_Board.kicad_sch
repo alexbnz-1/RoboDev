@@ -10,49 +10,50 @@
 		(rev "1")
 	)
 	(lib_symbols
-		(symbol "DRV8245H-Q1:DRV8245HQPWPRQ1"
+		(symbol "DRV8245H-Q1:DRV8245HQRXZRQ1"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "IC"
-				(at 31.75 7.62 0)
+			(property "Reference" "U"
+				(at 0 2.54 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(justify left top)
 				)
 			)
-			(property "Value" "DRV8245HQPWPRQ1"
-				(at 31.75 5.08 0)
+			(property "Value" "DRV8245HQRXZRQ1"
+				(at 0 0 0)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.524 1.524)
 					)
-					(justify left top)
 				)
 			)
-			(property "Footprint" "SOP65P640X120-29N"
-				(at 31.75 -94.92 0)
+			(property "Footprint" "RXZ0016A-MFG"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8245-q1.pdf?ts=1733801449058&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FDRV8245-Q1%252Fpart-details%252FDRV8245HQPWPRQ1"
-				(at 31.75 -194.92 0)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/drv8245-q1"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Description" "Motor / Motion / Ignition Controllers & Drivers Automotive 40-V, 32-A H-Bridge driver with integrated current sensing and feedback 28-HTSSOP -40 to 125"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -61,126 +62,85 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "1.2"
-				(at 31.75 -394.92 0)
+			(property "ki_locked" ""
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
-					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "595-DRV8245HQPWPRQ1"
-				(at 31.75 -494.92 0)
+			(property "ki_keywords" "DRV8245HQRXZRQ1"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8245HQPWPRQ1?qs=rQFj71Wb1eXxZL17d%252B8vZA%3D%3D"
-				(at 31.75 -594.92 0)
+			(property "ki_fp_filters" "RXZ0016A-MFG"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Name" "Texas Instruments"
-				(at 31.75 -694.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "DRV8245HQRXZRQ1_0_1"
+				(polyline
+					(pts
+						(xy 5.08 5.08) (xy 5.08 -53.34)
 					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "DRV8245HQPWPRQ1"
-				(at 31.75 -794.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(symbol "DRV8245HQPWPRQ1_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 30.48 -40.64)
 					(stroke
-						(width 0.254)
+						(width 0.2032)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
-				(pin passive line
+				(polyline
+					(pts
+						(xy 5.08 -53.34) (xy 33.02 -53.34)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 5.08) (xy 5.08 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 -53.34) (xy 33.02 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin power_in line
 					(at 0 0 0)
 					(length 5.08)
-					(name "SR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "DIAG"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "PH/IN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "EN/IN1"
+					(name "VM"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -195,172 +155,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -10.16 0)
+				(pin unspecified line
+					(at 0 -5.08 0)
 					(length 5.08)
-					(name "DRVOFF"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -12.7 0)
-					(length 5.08)
-					(name "VM_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -15.24 0)
-					(length 5.08)
-					(name "VM_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -17.78 0)
-					(length 5.08)
-					(name "VM_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -20.32 0)
-					(length 5.08)
-					(name "OUT1_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -22.86 0)
-					(length 5.08)
-					(name "OUT1_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -25.4 0)
-					(length 5.08)
-					(name "OUT1_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -27.94 0)
-					(length 5.08)
-					(name "GND_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -30.48 0)
-					(length 5.08)
-					(name "GND_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -33.02 0)
-					(length 5.08)
-					(name "GND_3"
+					(name "SR"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -375,262 +173,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 17.78 -45.72 90)
-					(length 5.08)
-					(name "EP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 0 180)
+				(pin unspecified line
+					(at 0 -10.16 0)
 					(length 5.08)
 					(name "ITRIP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -2.54 180)
-					(length 5.08)
-					(name "MODE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -5.08 180)
-					(length 5.08)
-					(name "NFAULT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -7.62 180)
-					(length 5.08)
-					(name "IPROPI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -10.16 180)
-					(length 5.08)
-					(name "NSLEEP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -12.7 180)
-					(length 5.08)
-					(name "VM_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -15.24 180)
-					(length 5.08)
-					(name "VM_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -17.78 180)
-					(length 5.08)
-					(name "VM_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -20.32 180)
-					(length 5.08)
-					(name "OUT2_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -22.86 180)
-					(length 5.08)
-					(name "OUT2_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -25.4 180)
-					(length 5.08)
-					(name "OUT2_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -27.94 180)
-					(length 5.08)
-					(name "GND_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -30.48 180)
-					(length 5.08)
-					(name "GND_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 35.56 -33.02 180)
-					(length 5.08)
-					(name "GND_4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -645,10 +191,244 @@
 						)
 					)
 				)
+				(pin unspecified line
+					(at 0 -15.24 0)
+					(length 5.08)
+					(name "MODE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -20.32 0)
+					(length 5.08)
+					(name "DIAG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -25.4 0)
+					(length 5.08)
+					(name "SLEEP_N"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -30.48 0)
+					(length 5.08)
+					(name "DRVOFF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 0 -35.56 0)
+					(length 5.08)
+					(name "FAULT_N"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -40.64 0)
+					(length 5.08)
+					(name "IPROPI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -45.72 0)
+					(length 5.08)
+					(name "EN_IN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -50.8 0)
+					(length 5.08)
+					(name "PH_IN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 38.1 0 180)
+					(length 5.08)
+					(name "OUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 38.1 -2.54 180)
+					(length 5.08)
+					(name "OUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 38.1 -10.16 180)
+					(length 5.08)
+					(name "OUT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 38.1 -12.7 180)
+					(length 5.08)
+					(name "OUT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 38.1 -50.8 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESP32-S3-WROOM-1U-N8R8:ESP32-S3-WROOM-1U-N8R8"
+		(symbol "ESP32-S3-WROOM-1U-N16R8:ESP32-S3-WROOM-1U-N16R8"
 			(pin_names
 				(offset 1.016)
 			)
@@ -664,8 +444,8 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "ESP32-S3-WROOM-1U-N8R8"
-				(at -10.16 -33.02 0)
+			(property "Value" "ESP32-S3-WROOM-1U-N16R8"
+				(at -10.16 -58.42 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -673,7 +453,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "ESP32-S3-WROOM-1U-N8R8:XCVR_ESP32-S3-WROOM-1U-N8R8"
+			(property "Footprint" "ESP32-S3-WROOM-1U-N16R8:XCVR_ESP32-S3-WROOM-1U-N16R8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -701,47 +481,7 @@
 					(hide yes)
 				)
 			)
-			(property "MF" "Espressif Systems"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "3.35mm"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Package" "SMD-41 Espressif Systems"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Price" "None"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Check_prices" "https://www.snapeda.com/parts/ESP32-S3-WROOM-1U-N8R8/Espressif+Systems/view-part/?ref=eda"
+			(property "PARTREV" "v1.1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -761,47 +501,7 @@
 					(hide yes)
 				)
 			)
-			(property "PARTREV" "v1.1"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SnapEDA_Link" "https://www.snapeda.com/parts/ESP32-S3-WROOM-1U-N8R8/Espressif+Systems/view-part/?ref=snap"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MP" "ESP32-S3-WROOM-1U-N8R8"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Description_1" "Bluetooth, WiFi 802.11b/g/n, Bluetooth v5.0 Transceiver Module 2.4GHz Antenna Not Included, U.FL Surface Mount"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Availability" "In Stock"
+			(property "MAXIMUM_PACKAGE_HEIGHT" "3.35mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -821,9 +521,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "ESP32-S3-WROOM-1U-N8R8_0_0"
+			(symbol "ESP32-S3-WROOM-1U-N16R8_0_0"
 				(rectangle
-					(start -10.16 -30.48)
+					(start -10.16 -55.88)
 					(end 10.16 30.48)
 					(stroke
 						(width 0.254)
@@ -1536,9 +1236,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -30.48 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__1"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1554,9 +1254,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -33.02 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__2"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1572,9 +1272,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -35.56 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__3"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1590,9 +1290,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -38.1 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__4"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1608,9 +1308,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -40.64 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__5"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1626,9 +1326,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -43.18 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__6"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1644,9 +1344,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -45.72 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__7"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1662,9 +1362,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -48.26 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__8"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1680,9 +1380,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -50.8 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__9"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1698,9 +1398,9 @@
 					)
 				)
 				(pin power_in line
-					(at 15.24 -27.94 180)
+					(at 15.24 -53.34 180)
 					(length 5.08)
-					(name "GND"
+					(name "GND__10"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1720,33 +1420,33 @@
 		)
 	)
 	(symbol
-		(lib_id "ESP32-S3-WROOM-1U-N8R8:ESP32-S3-WROOM-1U-N8R8")
-		(at 91.44 82.55 0)
+		(lib_id "ESP32-S3-WROOM-1U-N16R8:ESP32-S3-WROOM-1U-N16R8")
+		(at 113.03 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1bf69234-eb04-4796-af90-aeb992a7e115")
-		(property "Reference" "U1"
-			(at 91.44 46.99 0)
+		(uuid "17da00a0-3568-4989-af5c-a6dc8061dba8")
+		(property "Reference" "U2"
+			(at 113.03 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "ESP32-S3-WROOM-1U-N8R8"
-			(at 91.44 49.53 0)
+		(property "Value" "ESP32-S3-WROOM-1U-N16R8"
+			(at 113.03 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "ESP32-S3-WROOM-1U-N8R8:XCVR_ESP32-S3-WROOM-1U-N8R8"
-			(at 91.44 82.55 0)
+		(property "Footprint" "ESP32-S3-WROOM-N16R8:XCVR_ESP32-S3-WROOM-1U-N16R8"
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1756,7 +1456,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 82.55 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1765,7 +1465,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 91.44 82.55 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1773,48 +1473,8 @@
 				(hide yes)
 			)
 		)
-		(property "MF" "Espressif Systems"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "3.35mm"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" "SMD-41 Espressif Systems"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Price" "None"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/ESP32-S3-WROOM-1U-N8R8/Espressif+Systems/view-part/?ref=eda"
-			(at 91.44 82.55 0)
+		(property "PARTREV" "v1.1"
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1824,7 +1484,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 91.44 82.55 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1833,48 +1493,8 @@
 				(hide yes)
 			)
 		)
-		(property "PARTREV" "v1.1"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/ESP32-S3-WROOM-1U-N8R8/Espressif+Systems/view-part/?ref=snap"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "ESP32-S3-WROOM-1U-N8R8"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" "Bluetooth, WiFi 802.11b/g/n, Bluetooth v5.0 Transceiver Module 2.4GHz Antenna Not Included, U.FL Surface Mount"
-			(at 91.44 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 91.44 82.55 0)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "3.35mm"
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1884,7 +1504,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Espressif Systems"
-			(at 91.44 82.55 0)
+			(at 113.03 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1893,358 +1513,269 @@
 				(hide yes)
 			)
 		)
-		(pin "41_3"
-			(uuid "8f0e8e97-448a-47f7-bdc5-81afa2e2d5f7")
-		)
-		(pin "41_4"
-			(uuid "549a1541-d4d1-409d-bf88-d15eb4be76d2")
-		)
-		(pin "41_5"
-			(uuid "29ee630d-a3f0-4f01-9906-39076f6f634e")
-		)
-		(pin "41_6"
-			(uuid "42e8bc3f-f3ac-4870-9891-a63eb15143cd")
-		)
-		(pin "41_7"
-			(uuid "48d4d90d-8c50-40b7-bb48-1dbb7c2761e7")
-		)
-		(pin "41_8"
-			(uuid "d30f8791-0d4e-454c-8272-77e498eeae10")
-		)
 		(pin "41_9"
-			(uuid "37866d43-a89b-408c-bbe9-670d59a13cdd")
-		)
-		(pin "36"
-			(uuid "710055ba-d4d8-4305-8fa6-341724c51f3c")
-		)
-		(pin "3"
-			(uuid "35f69dd8-b394-4ae0-aede-8c4eba132699")
-		)
-		(pin "28"
-			(uuid "bc3db093-0d60-406f-a3cf-af3918ac6da0")
-		)
-		(pin "11"
-			(uuid "b1f63f80-3405-40d3-b489-df5bbaa70866")
-		)
-		(pin "8"
-			(uuid "0c8636ca-7b89-473f-ae6f-fad21b32a0f9")
-		)
-		(pin "23"
-			(uuid "380c6c47-2aec-4052-873f-cf550cb029d7")
+			(uuid "299ebe58-b887-42c5-bb6b-1de9d79e0d16")
 		)
 		(pin "10"
-			(uuid "04b6c86d-9c34-45c6-935e-6eae47ccf2ff")
+			(uuid "8f99b93e-3c9f-403b-8bba-88d919f2758c")
 		)
-		(pin "14"
-			(uuid "cb7ac7eb-f4ad-4324-bed8-fabb21e99f6d")
+		(pin "11"
+			(uuid "0ac123b1-0a23-4adf-bd9d-5b993d30aa39")
 		)
 		(pin "13"
-			(uuid "56bd5798-4329-42f1-9c37-ed7a7c2da482")
-		)
-		(pin "30"
-			(uuid "2f2204de-5abe-433f-881e-f508fccf9fd5")
+			(uuid "d73c56e9-779d-4bed-aa50-b6b5aad14480")
 		)
 		(pin "9"
-			(uuid "cc079431-0003-4fe5-a51d-8a4a229760ad")
-		)
-		(pin "29"
-			(uuid "35f68f14-ffac-48e0-9c29-42e55ef6c6e7")
-		)
-		(pin "38"
-			(uuid "28c1b455-a255-4ea5-b634-53e105503d28")
-		)
-		(pin "5"
-			(uuid "9a252518-dbfa-456a-9d54-dc61048606c6")
-		)
-		(pin "6"
-			(uuid "b14e5183-62e0-440b-8d7a-817e8b43b36b")
-		)
-		(pin "39"
-			(uuid "eb7b9496-6d8c-4e75-9b2a-54a2e56a068f")
-		)
-		(pin "4"
-			(uuid "d97c4506-cb10-404b-830e-533bd03b70aa")
-		)
-		(pin "15"
-			(uuid "d23af3b1-19c8-4a34-b437-0781f9f43770")
-		)
-		(pin "19"
-			(uuid "b05ccf76-02a1-4026-8309-6da5d71661ab")
-		)
-		(pin "27"
-			(uuid "e002c34a-2acc-4cd7-a06c-748a18ad22ad")
-		)
-		(pin "17"
-			(uuid "db338406-2eae-45e2-9f6f-6e9e27267278")
-		)
-		(pin "20"
-			(uuid "8632a174-793e-4c1b-baf9-e32df8e31382")
-		)
-		(pin "7"
-			(uuid "45bd3c42-a2a1-44aa-92a0-262a23237a20")
+			(uuid "48fde75c-1596-4b1e-a71d-e22eef5a8e4a")
 		)
 		(pin "18"
-			(uuid "5edd69cc-87a7-482e-8b82-0672eb897d06")
+			(uuid "eff2e6e5-4dda-4a4f-be80-ff63e8596525")
 		)
-		(pin "21"
-			(uuid "9f1f5a22-683a-4934-b2bb-a80f07bba98a")
+		(pin "36"
+			(uuid "793626ab-1b46-48ac-a51c-df6f6b67c7f2")
 		)
-		(pin "12"
-			(uuid "06ef80e9-61c7-4d10-aedb-203de0baa5ab")
+		(pin "39"
+			(uuid "3d799f90-b8b2-403f-8b9d-58930b106d66")
 		)
-		(pin "2"
-			(uuid "3b5c58ef-3574-48ee-b743-bad123e4fdb7")
+		(pin "5"
+			(uuid "e333f738-827c-4528-9fb2-3c5cd7a3b013")
+		)
+		(pin "8"
+			(uuid "09dc08c8-b8de-4425-86ac-518829db0ee4")
 		)
 		(pin "22"
-			(uuid "7504c4ca-4fe4-426e-b8ba-8406be9214a0")
+			(uuid "160d5378-1bbe-40ac-91b0-69ad0c866038")
+		)
+		(pin "27"
+			(uuid "f4eb3705-54c2-4c28-8ee7-f7ece33dfe8a")
+		)
+		(pin "38"
+			(uuid "dfcc7e45-ab41-49f2-af75-65d9bc4b85f7")
+		)
+		(pin "2"
+			(uuid "2b58aa4d-755d-4036-ac73-49fa5c91501b")
+		)
+		(pin "12"
+			(uuid "85cacc07-2eeb-45bf-920d-2d62cff3d493")
+		)
+		(pin "17"
+			(uuid "f70d22f4-cce5-453d-9f88-8a0fac231de9")
 		)
 		(pin "37"
-			(uuid "b897241f-f7ba-442d-b2e0-274f6db26bce")
+			(uuid "0618ddd8-424c-4bde-9fc9-7455cb9164fd")
 		)
-		(pin "41_2"
-			(uuid "2f7c5bca-17d3-457c-b982-433cbc7697d0")
+		(pin "6"
+			(uuid "c04d9cb5-f3c6-46f6-a889-a316ec6ccee6")
 		)
-		(pin "35"
-			(uuid "66c8803b-4b54-4cde-a0a7-ddeab5ebdc84")
+		(pin "7"
+			(uuid "6c1b7f5c-676e-43b6-8152-b81719757ae6")
 		)
-		(pin "1"
-			(uuid "94c8656b-806d-409a-bf66-38f2faa4c4c8")
+		(pin "20"
+			(uuid "7fe04934-bb67-4af8-9960-4d0750ca70cd")
 		)
-		(pin "31"
-			(uuid "5ec08ef0-7c83-4d8e-a3e0-34d82554fc0e")
+		(pin "4"
+			(uuid "dc2445b3-2164-4ebb-af7a-b365608680d1")
 		)
-		(pin "24"
-			(uuid "3c6be47c-4cb2-4825-ad37-f0ca48c7353d")
+		(pin "19"
+			(uuid "1a732aa9-4b9f-4526-a9a4-126df1d8637f")
 		)
-		(pin "16"
-			(uuid "7ec35331-6ce8-4017-a286-40178ed9ab0a")
+		(pin "21"
+			(uuid "2011389a-3440-4bff-8d9b-ebbdb52bbe6c")
 		)
-		(pin "32"
-			(uuid "681af5b0-553a-4b28-9ce5-439cce57d2ad")
+		(pin "15"
+			(uuid "0471fe16-d57e-4640-a5b0-98e5704d771f")
+		)
+		(pin "3"
+			(uuid "493cb14e-b05d-401e-8550-39845ea3b133")
+		)
+		(pin "14"
+			(uuid "23d2c273-d7a7-4ed3-8b70-67f9a4d8e69b")
+		)
+		(pin "41_6"
+			(uuid "d211164a-e004-4f21-9807-815885184fe0")
+		)
+		(pin "41_7"
+			(uuid "7a401f1b-acd5-4ee4-9efb-06ec3450a63d")
 		)
 		(pin "25"
-			(uuid "872b7420-b2a0-460f-84be-322ced1bc229")
+			(uuid "3912aa0d-7720-40ad-aac8-9ca4c6a72ca0")
 		)
-		(pin "40"
-			(uuid "3fed1123-c85c-407d-8cdf-5a45d261cd2d")
+		(pin "24"
+			(uuid "8a73be1f-89df-4288-9e2e-bc7aa9f081c4")
 		)
-		(pin "34"
-			(uuid "bbe79024-1b79-48ad-8127-e194de54e513")
-		)
-		(pin "41_1"
-			(uuid "0714c374-776c-4fcb-a784-b4277afa7e37")
+		(pin "32"
+			(uuid "62445873-9520-4044-b6de-32799b8b9cb5")
 		)
 		(pin "33"
-			(uuid "ace2c7cb-c60d-4aa2-9954-2da1d6a9dee1")
+			(uuid "577aeed6-8422-4973-9b07-4465bf42c3a6")
+		)
+		(pin "34"
+			(uuid "1d64ff0b-3964-4cf7-9562-9a369cb3776d")
+		)
+		(pin "35"
+			(uuid "1aea3884-9328-41fe-b163-7646bac5b773")
 		)
 		(pin "26"
-			(uuid "ad3c84fc-428f-42e1-b482-3e5d03844d72")
+			(uuid "63071127-0662-49f1-9be7-88cab2e2bdbf")
+		)
+		(pin "16"
+			(uuid "0f46961c-e83f-485b-b8d2-4f0ed68dd2ab")
+		)
+		(pin "1"
+			(uuid "fc583571-f19e-40a1-9b78-562ae777d3bb")
+		)
+		(pin "40"
+			(uuid "8f168283-31c9-4b58-bea0-30d618224acd")
+		)
+		(pin "41_1"
+			(uuid "a7b7ac7c-7250-421e-81fc-90a46e645588")
+		)
+		(pin "41_2"
+			(uuid "ad812c8e-7b0b-4738-92e0-9fc62b1fa030")
+		)
+		(pin "41_3"
+			(uuid "70716101-db70-45e1-87b1-ba7574dfba05")
+		)
+		(pin "41_4"
+			(uuid "5eb78155-ddac-4530-9cd9-95e23d957529")
+		)
+		(pin "41_5"
+			(uuid "94b7b004-bc9f-4aea-9b9a-0cbf899f4796")
+		)
+		(pin "41_8"
+			(uuid "928ae3dc-a7f4-4295-aa66-5d203461525e")
+		)
+		(pin "23"
+			(uuid "6985f6c5-87d2-4b68-9c28-afc4917a044c")
+		)
+		(pin "31"
+			(uuid "2a0cac5d-efea-42ff-966f-ce7e1329fa33")
+		)
+		(pin "30"
+			(uuid "1ee52375-7606-4947-aec9-0c3e43f59190")
+		)
+		(pin "29"
+			(uuid "21105631-d5e7-4d95-b1fa-0729aa5e4bbb")
+		)
+		(pin "28"
+			(uuid "92cd7dac-f719-4c23-91c2-0211962c7a29")
 		)
 		(instances
 			(project ""
 				(path "/16424436-3301-4b70-a698-6c981baa083e"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "DRV8245H-Q1:DRV8245HQPWPRQ1")
-		(at 157.48 60.96 0)
+		(lib_id "DRV8245H-Q1:DRV8245HQRXZRQ1")
+		(at 166.37 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "358b0d47-e680-4133-800f-5051960b9f6e")
-		(property "Reference" "IC1"
-			(at 175.26 53.34 0)
+		(uuid "54bdb7f0-f876-43f0-890b-65e0ca4f2643")
+		(property "Reference" "U1"
+			(at 185.42 52.07 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Value" "DRV8245HQPWPRQ1"
-			(at 175.26 55.88 0)
+		(property "Value" "DRV8245HQRXZRQ1"
+			(at 185.42 54.61 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "SOP65P640X120-29N"
-			(at 189.23 155.88 0)
+		(property "Footprint" "DRV8245H-Q1:RXZ0016A-MFG"
+			(at 166.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8245-q1.pdf?ts=1733801449058&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FDRV8245-Q1%252Fpart-details%252FDRV8245HQPWPRQ1"
-			(at 189.23 255.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "Motor / Motion / Ignition Controllers & Drivers Automotive 40-V, 32-A H-Bridge driver with integrated current sensing and feedback 28-HTSSOP -40 to 125"
-			(at 157.48 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
+					(italic yes)
 				)
 				(hide yes)
 			)
 		)
-		(property "Height" "1.2"
-			(at 189.23 455.88 0)
+		(property "Datasheet" "https://www.ti.com/lit/gpn/drv8245-q1"
+			(at 166.37 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 				(hide yes)
 			)
-		)
-		(property "Mouser Part Number" "595-DRV8245HQPWPRQ1"
-			(at 189.23 555.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8245HQPWPRQ1?qs=rQFj71Wb1eXxZL17d%252B8vZA%3D%3D"
-			(at 189.23 655.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Texas Instruments"
-			(at 189.23 755.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "DRV8245HQPWPRQ1"
-			(at 189.23 855.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "85e5918a-313a-4dd4-806d-2b7e880091a8")
-		)
-		(pin "1"
-			(uuid "b2f67dd1-e751-4936-937d-c9a48855ab7d")
-		)
-		(pin "3"
-			(uuid "813ebf66-2bd4-4af0-9eec-b8c59ea974e1")
-		)
-		(pin "4"
-			(uuid "800019b6-b508-466c-8833-9219fdc127a7")
-		)
-		(pin "5"
-			(uuid "35de50ab-640a-42d8-b932-3364f0e9c144")
-		)
-		(pin "6"
-			(uuid "882ed8e8-f862-491d-8515-76214c296edf")
-		)
-		(pin "7"
-			(uuid "bbe28a59-11a3-4817-b5cb-7c025d428ed6")
-		)
-		(pin "8"
-			(uuid "eee26f71-7b6f-4280-a77a-0cf9b440505f")
-		)
-		(pin "9"
-			(uuid "ca20f34b-b657-4d55-b13d-a46c26dd1fd0")
-		)
-		(pin "10"
-			(uuid "bde6c2a7-f672-47cc-94d1-4c0a11ed75e3")
 		)
 		(pin "11"
-			(uuid "8efe9e92-c8ec-411c-930b-2c5f5b20e31f")
+			(uuid "432f14fa-30f6-465e-8e0c-0a08579fdc34")
 		)
 		(pin "12"
-			(uuid "daf5e08d-d609-435c-9ff7-b76433f115e5")
+			(uuid "4d355669-e7b1-411d-b1a6-38999ff90f60")
 		)
-		(pin "13"
-			(uuid "5764f477-2a0c-4009-825c-7b2752df04cb")
+		(pin "8"
+			(uuid "e54f887c-f900-403f-aaed-11f14b41fcfb")
 		)
-		(pin "14"
-			(uuid "5655b457-7c0f-485c-8c43-75551b06dbf0")
+		(pin "9"
+			(uuid "9fa9297f-015d-4eb2-acbc-9e482d40d686")
 		)
-		(pin "29"
-			(uuid "4bb17666-3f6f-44a0-860d-259c08fc0d57")
+		(pin "5"
+			(uuid "cd02dc98-0426-4a66-932b-243df94c839c")
 		)
-		(pin "28"
-			(uuid "053d7586-1f7e-44ee-839f-63226ff23645")
+		(pin "6"
+			(uuid "b7527e98-788c-4207-8267-aeaff0e99e37")
 		)
-		(pin "27"
-			(uuid "c9ac8342-49be-45ef-bde7-5196029acd30")
-		)
-		(pin "26"
-			(uuid "7facd522-1eea-4315-9325-5947ec3dac9a")
-		)
-		(pin "25"
-			(uuid "0a0d10ac-b2b4-4024-9a45-eb309854ec0b")
-		)
-		(pin "24"
-			(uuid "49617f19-8f6b-4261-aa58-5ee16580b76f")
-		)
-		(pin "23"
-			(uuid "7e6bc087-7ad2-40d3-b688-d50738683b62")
-		)
-		(pin "22"
-			(uuid "51da7604-4edd-42f1-b1b4-cf220f2cefae")
-		)
-		(pin "21"
-			(uuid "f451561b-8e27-4c65-a308-493e18205fdf")
-		)
-		(pin "20"
-			(uuid "43e26a3b-9d56-46f4-a683-25fe5a620040")
-		)
-		(pin "15"
-			(uuid "f1239139-2c60-424b-acde-d27a2200b164")
+		(pin "7"
+			(uuid "9a27bad1-efc0-46de-8311-5666b8e01c29")
 		)
 		(pin "16"
-			(uuid "1914b44c-d0f2-4f19-a9a1-06187c3b174d")
+			(uuid "fd4e5141-8182-4e6f-81f9-50113040dc47")
 		)
-		(pin "17"
-			(uuid "e043b65e-7ec4-4688-bfad-dc59b338ae3b")
+		(pin "14"
+			(uuid "a5e3fcf8-7a5b-4cd0-bf92-975fd08608a7")
 		)
-		(pin "18"
-			(uuid "33c220e5-399e-4e50-b7f9-022e2c62861f")
+		(pin "15"
+			(uuid "9f4c3c40-db4e-41a2-b75d-c8dffab01034")
 		)
-		(pin "19"
-			(uuid "d56c83f3-189b-447e-9d82-2bfad5e6ab54")
+		(pin "1"
+			(uuid "f16b0b89-1104-438c-b732-6f538e5fe382")
+		)
+		(pin "2"
+			(uuid "f3158a23-8a67-4002-9bd4-85ba7029c0d8")
+		)
+		(pin "4"
+			(uuid "eb2e0427-b9a0-4042-b8b2-170bc620fc37")
+		)
+		(pin "13"
+			(uuid "e0521cf9-d588-4d2c-9b5e-e6c595bbb94b")
+		)
+		(pin "3"
+			(uuid "9559c820-12c6-4ad0-8a3f-16e53c30a16e")
+		)
+		(pin "10"
+			(uuid "a68697b1-0f82-47c8-8a79-b635c2cd89dd")
 		)
 		(instances
 			(project ""
 				(path "/16424436-3301-4b70-a698-6c981baa083e"
-					(reference "IC1")
+					(reference "U1")
 					(unit 1)
 				)
 			)
