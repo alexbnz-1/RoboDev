@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "DRV8245H-Q1")(type "KiCad")(uri "${KIPRJMOD}/Components/DRV8245HQRXZRQ1")(options "")(descr ""))
   (lib (name "ESP32-S3-WROOM-N16R8")(type "KiCad")(uri "${KIPRJMOD}/Components/ESP32-S3-WROOM-1U-N16R8")(options "")(descr ""))
+  (lib (name "Type C Connector")(type "KiCad")(uri "${KIPRJMOD}/Components/Type C connector")(options "")(descr ""))
+  (lib (name "PCA9685 PWM Servo Driver")(type "KiCad")(uri "${KIPRJMOD}/Components/PCA9685PW_118 PWM Servo Driver")(options "")(descr ""))
 )
