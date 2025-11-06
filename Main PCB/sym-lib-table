@@ -4,4 +4,6 @@
   (lib (name "ESP32-S3-WROOM-1U-N16R8")(type "KiCad")(uri "${KIPRJMOD}/Components/ESP32-S3-WROOM-1U-N16R8/ESP32-S3-WROOM-1U-N16R8.kicad_sym")(options "")(descr ""))
   (lib (name "Type C connector")(type "KiCad")(uri "${KIPRJMOD}/Components/Type C connector/TYPE-C-31-M-12.kicad_sym")(options "")(descr ""))
   (lib (name "PCA9685 PWM Servo Driver")(type "KiCad")(uri "${KIPRJMOD}/Components/PCA9685PW_118 PWM Servo Driver/PCA9685PW_118.kicad_sym")(options "")(descr ""))
+  (lib (name "MPU-6050 Accelerometer")(type "KiCad")(uri "${KIPRJMOD}/Components/MPU-6050 Acceler_Gyro/MPU-6050.kicad_sym")(options "")(descr ""))
+  (lib (name "XT60PW-M Connector")(type "KiCad")(uri "${KIPRJMOD}/Components/XT60PW-M Connector/XT60PW-M.kicad_sym")(options "")(descr ""))
 )
