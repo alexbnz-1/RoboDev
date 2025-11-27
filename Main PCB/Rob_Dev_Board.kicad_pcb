@@ -303,7 +303,7 @@
 	(footprint "XT60PW-M Connector:AMASS_XT60PW-M"
 		(layer "F.Cu")
 		(uuid "00c97f6c-922f-4633-9f06-e95558f90ef7")
-		(at 193.75 67.5)
+		(at 197.5 67)
 		(property "Reference" "J11"
 			(at -4.8236 -13.51498 0)
 			(layer "F.SilkS")
