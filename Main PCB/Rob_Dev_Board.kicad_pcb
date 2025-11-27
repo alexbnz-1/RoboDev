@@ -2291,11 +2291,11 @@
 	(footprint "XT60PW-M Connector:AMASS_XT60PW-M"
 		(layer "F.Cu")
 		(uuid "1b293696-977f-431c-ad3b-c38ce4b11fa7")
-		(at 105 79)
+		(at 85 63)
 		(property "Reference" "J3"
 			(at -4.8236 -13.51498 0)
 			(layer "F.SilkS")
-			(uuid "07f61fbb-9105-48c3-aca3-8d28cdf91964")
+			(uuid "ce132f15-d70a-46b6-9d55-26980c423407")
 			(effects
 				(font
 					(size 1.000441 1.000441)
@@ -2306,7 +2306,7 @@
 		(property "Value" "XT60PW-M"
 			(at 0.9054 -12.0434 0)
 			(layer "F.Fab")
-			(uuid "8a2ca043-f249-4f38-80a5-a89e95b87f9a")
+			(uuid "538319e5-d38f-4682-9473-b91f0843f2d3")
 			(effects
 				(font
 					(size 1.001732 1.001732)
@@ -2318,7 +2318,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a8522e95-57a6-4deb-a353-3d3acb2b182c")
+			(uuid "a9a48a8f-f153-4a12-8cbc-28c39aa2b1df")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2330,7 +2330,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "05ee572a-b33c-4ae5-8206-26f0bb138e30")
+			(uuid "510e6fde-0031-437c-adc7-fc91a1228d89")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7162,7 +7162,7 @@
 	(footprint "XT60PW-M Connector:AMASS_XT60PW-M"
 		(layer "F.Cu")
 		(uuid "b85c8bdf-0075-4361-a97f-054b2c947272")
-		(at 142.5 79)
+		(at 143.25 79)
 		(property "Reference" "J2"
 			(at -4.8236 -13.51498 0)
 			(layer "F.SilkS")
