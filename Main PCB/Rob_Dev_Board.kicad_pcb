@@ -10041,7 +10041,7 @@
 	(footprint "XT60PW-M Connector:AMASS_XT60PW-M"
 		(layer "F.Cu")
 		(uuid "efac8508-0191-4225-81a8-8cd66c3a603e")
-		(at 100 137.25 90)
+		(at 111 120.6 90)
 		(property "Reference" "J6"
 			(at -4.8236 -13.51498 90)
 			(layer "F.SilkS")
@@ -10538,7 +10538,7 @@
 	(footprint "ESP32-S3-WROOM-N16R8:XCVR_ESP32-S3-WROOM-1U-N16R8"
 		(layer "F.Cu")
 		(uuid "f40c2631-3641-4d7a-9639-2bab74a07f7b")
-		(at 146.365 132.85 180)
+		(at 146.5 130.61 180)
 		(property "Reference" "U2"
 			(at -6.575 -10.885 0)
 			(layer "F.SilkS")
