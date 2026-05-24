@@ -69,3 +69,38 @@ Icon?
 # Claude Code / AI tools
 # =========================
 .claude/
+
+# =========================
+# LaTeX build artifacts
+# (keep .tex and .pdf only)
+# =========================
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.dvi
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.acn
+*.acr
+*.alg
+*.xdy
+_minted-*/
+*.pytxcode
+auto/

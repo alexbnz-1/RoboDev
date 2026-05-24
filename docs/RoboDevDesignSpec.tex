@@ -1,0 +1,761 @@
+% RoboDev Design Specification
+% STM32G431 + ESP32-C3 Integrated Robotics Prototyping Board
+
+\documentclass[11pt,a4paper]{article}
+
+% ── Encoding & fonts ─────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ── Page layout ──────────────────────────────────────────────────────────────
+\usepackage[a4paper, top=25mm, bottom=25mm, left=25mm, right=25mm]{geometry}
+
+% ── Tables ───────────────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% ── Colour & graphics ────────────────────────────────────────────────────────
+\usepackage[table]{xcolor}
+\definecolor{newrow}{RGB}{214,234,248}   % light blue — new in v0.8
+\definecolor{warnbg}{RGB}{255,243,205}  % amber — warning boxes
+\definecolor{infobg}{RGB}{232,245,233}  % green — info boxes
+\definecolor{headergray}{RGB}{52,73,94} % dark header
+\definecolor{rowalt}{RGB}{242,242,242}  % alternating row grey
+
+% ── Headings & lists ─────────────────────────────────────────────────────────
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=3pt}
+
+% ── Hyperlinks ───────────────────────────────────────────────────────────────
+\usepackage[colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black,
+            pdftitle={RoboDev Design Specification v0.8},
+            pdfauthor={RoboDev Project}]{hyperref}
+
+% ── Header / footer ──────────────────────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small\textbf{RoboDev} — Design Specification}
+\fancyhead[R]{\small v0.8 · May 2026}
+\fancyfoot[C]{\small\thepage}
+
+% ── Custom environments ───────────────────────────────────────────────────────
+\usepackage{mdframed}
+\newmdenv[backgroundcolor=warnbg, linecolor=orange!70!black,
+          linewidth=0.8pt, innerleftmargin=8pt, innerrightmargin=8pt,
+          innertopmargin=4pt, innerbottommargin=4pt]{warningbox}
+\newmdenv[backgroundcolor=infobg, linecolor=green!60!black,
+          linewidth=0.8pt, innerleftmargin=8pt, innerrightmargin=8pt,
+          innertopmargin=4pt, innerbottommargin=4pt]{infobox}
+
+% ── Misc ─────────────────────────────────────────────────────────────────────
+\usepackage{parskip}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}    % $\checkmark$
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{document}
+
+% ── Title page ───────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Huge\bfseries RoboDev\par}
+  \vspace{0.5cm}
+  {\large STM32G431 + ESP32-C3 Integrated Robotics Prototyping Board\par}
+  \vspace{0.3cm}
+  {\normalsize Design Specification $\mid$ v0.8 $\mid$ May 2026\par}
+  \vspace{2cm}
+  \noindent\rule{\textwidth}{0.4pt}
+  \vspace{0.5cm}
+
+  \begin{tabular}{ll}
+    \textbf{Status}  & Schematic substantially complete — PCB layout not yet started \\
+    \textbf{MCU}     & STM32G431RBTx (primary) + ESP32-C3-MINI-1-N4 (WiFi co-processor) \\
+    \textbf{Repo}    & \url{https://github.com/alexbnz-1/RoboDev} \\
+  \end{tabular}
+  \vspace{0.5cm}
+  \noindent\rule{\textwidth}{0.4pt}
+\end{titlepage}
+
+% ── Table of contents ─────────────────────────────────────────────────────────
+\tableofcontents
+\clearpage
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Revision History}
+\addcontentsline{toc}{section}{Revision History}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{1.3cm} p{2cm} p{11cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Version} &
+  \color{white}\textbf{Date} &
+  \color{white}\textbf{Summary of Changes} \\
+  \midrule\endhead
+  v0.1 & Mar 2026 & Initial document from notebook notes (22 Oct -- 17 Nov 2025). \\
+  v0.2 & Mar 2026 & DRV8245-Q1 \textrightarrow{} DRV8874. MPU-6050 \textrightarrow{} BMI270. \\
+  v0.3 & Mar 2026 & Soldered WROOM module \textrightarrow{} ESP32-S3 DevKitC-1 v1.1 in dual-row headers. \\
+  v0.4 & Mar 2026 & NEMA\,17 stepper support: 2$\times$ TMC2209, GPIO26--31 allocated. \\
+  v0.5 & Mar 2026 & MPU-6050 GY-521 replaces BMI270. ADS1115, PCF8574, OLED header. Servos 8\textrightarrow{}16. SPI/UART/carrier USB-C removed. 5$\times$ ADC1 headers. \\
+  v0.6 & Mar 2026 & CAN bus (TWAI, GPIO7/32, SN65HVD230). Encoders 4\textrightarrow{}2. nFAULT\textrightarrow{}indicator LED. UART1 header (GPIO47/21). GPIO38/48 written off. Separate Vmot-DC and Vstep rails. 0 spare GPIOs. BOM \textasciitilde{}NZ\$82.81. \\
+  v0.7 & Mar 2026 & \textbf{$\star$\ I$^2$C expansion array:} 2$\times$ TCA9548A mux (0x70/0x71) + 6$\times$ Qwiic JST\,SH + 10$\times$ 2.54\,mm 4-pin headers = 16 independent expansion ports. Reverse-ARP HAL for automatic peripheral discovery. BOM \textasciitilde{}NZ\$90--92. \\
+  \rowcolor{newrow}
+  v0.8 & May 2026 & \textbf{$\star$\ Dual-MCU architecture:} STM32G431RBTx replaces ESP32-S3 as primary MCU. ESP32-C3-MINI-1-N4 added as SPI-attached WiFi/BT co-processor. BMI270 IMU moves to SPI (co-processor sheet). USB4085-GF-A Type-C on carrier. SWD debug port added. XT60PW-M replaces XT30 power connector. IRF4905 PMOS reverse protection. 74HC595 shift register added. XL4016 $\times$2 for VMOT + VSTEP. KiCad schematic implementation begun (all major blocks drawn). \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+RoboDev is an open-source integrated robotics prototyping board built around a \textbf{dual-MCU architecture}: an STMicroelectronics STM32G431RBTx Cortex-M4F as the primary motor control processor, and an Espressif ESP32-C3-MINI-1-N4 module as a SPI-attached WiFi and Bluetooth co-processor. It is designed to eliminate the wiring overhead that typically accompanies microcontroller-based robotics projects by integrating motor drivers, a servo PWM controller, stepper motor drivers, a CAN bus transceiver, an IMU, analogue ADC expanders, digital GPIO expansion, an I$^2$C expansion array, and a complete multi-rail power supply onto a single carrier PCB.
+
+The core philosophy of RoboDev is that only three types of wire should ever need to be connected to the board: power in, and wires out to sensors and actuators. All signal routing --- from the MCU to driver ICs, from the I$^2$C bus to peripherals, from the power switch to every rail --- is handled on the PCB itself.
+
+\subsection{Motivation}
+
+Robotics prototyping typically requires a breadboard or custom wiring harness to connect motor driver breakout boards, servo controllers, and sensor modules. This introduces noise susceptibility, mechanical fragility, and significant bring-up time before any firmware can be tested. RoboDev solves this by providing a production-ready carrier board with the STM32G431RBTx at the centre --- a Cortex-M4F processor from ST's G4 series that is purpose-built for motor control and digital power conversion, with hardware PWM timers, FDCAN, and a hardware FPU.
+
+Wireless connectivity is provided by the ESP32-C3-MINI-1-N4, mounted on the carrier and connected to the STM32 via SPI. This separation of concerns keeps the hard-real-time motor control tasks on the deterministic STM32 while offloading WiFi, Bluetooth, and any cloud connectivity tasks to the ESP32-C3.
+
+\subsection{Design Philosophy}
+
+\begin{itemize}
+  \item Full-featured and self-contained --- no daughterboards or breakout modules required
+  \item Dual-MCU architecture: STM32G431RBTx for real-time control; ESP32-C3-MINI-1-N4 for wireless
+  \item Any motor type supported simultaneously: 4$\times$ brushed DC, 16$\times$ servo, 2$\times$ NEMA\,17 stepper, and CAN-capable motor controllers
+  \item BMI270 6-axis IMU on SPI for high-speed attitude estimation
+  \item Three independently adjustable power rails for motors, steppers, and servos
+  \item 16-port I$^2$C expansion array via 2$\times$ TCA9548A mux (zero GPIO cost)
+  \item All components hand-solderable --- no BGA or ultra-fine-pitch packages
+  \item Open source: schematics, PCB layout, firmware, and documentation on GitHub
+\end{itemize}
+
+\subsection{Target Applications}
+
+\begin{itemize}
+  \item 2WD and 4WD wheeled robot platforms
+  \item Multi-axis robot arms with CAN-capable joint controllers
+  \item Mechatronics rigs requiring mixed motor types on a single controller
+  \item Autonomous vehicles with wireless telemetry and IMU sensor fusion
+  \item Sensor-dense robots using the I$^2$C expansion array for multiple sensors
+  \item Educational robotics platforms requiring a robust, well-documented base board
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{System Overview}
+
+RoboDev uses a two-MCU design. The \textbf{STM32G431RBTx} is the primary processor, handling all real-time motor control, CAN communication, sensor interfacing, and I$^2$C bus management. The \textbf{ESP32-C3-MINI-1-N4} sits alongside it on the carrier PCB, connected to the STM32 via SPI, and handles all WiFi and Bluetooth tasks.
+
+The board is divided into eight functional domains: power management, primary MCU (STM32), WiFi co-processor (ESP32-C3), motor control (DC, stepper, servo), communication (I$^2$C, CAN, UART), sensing (IMU, analogue, digital), expansion (Qwiic, GPIO headers), and the I$^2$C expansion array.
+
+\subsection{Core Requirements Summary}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{4.5cm} p{10cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Category} & \color{white}\textbf{Requirement / Specification} \\
+  \midrule\endhead
+  Primary MCU & STM32G431RBTx $\cdot$ Cortex-M4F $\cdot$ 170\,MHz $\cdot$ FPU $\cdot$ 128\,KB Flash $\cdot$ LQFP-64 \\
+  WiFi Co-processor & ESP32-C3-MINI-1-N4 $\cdot$ SPI-connected $\cdot$ 802.11b/g/n + Bluetooth 5 \\
+  DC Motors & 4 channels $\cdot$ DRV8874PWPR $\cdot$ 4.5--37\,V $\cdot$ 2.1\,A cont.\,/ 6\,A peak $\cdot$ nFAULT LED \\
+  Servos & 16 channels $\cdot$ PCA9685PW I$^2$C PWM driver (0x40) $\cdot$ 12-bit resolution $\cdot$ 5\,V servo rail \\
+  Stepper Motors & 2 channels $\cdot$ TMC2209-LA-T $\cdot$ NEMA\,17 $\cdot$ 2\,A\,RMS / 2.8\,A peak $\cdot$ UART-configurable $\cdot$ StealthChop2 \\
+  CAN Bus & FDCAN (ISO\,11898-1) $\cdot$ SN65HVD230D 3.3\,V transceiver $\cdot$ up to 1\,Mbps $\cdot$ 5.08\,mm screw terminal \\
+  IMU & BMI270 $\cdot$ 6-axis accel + gyro $\cdot$ SPI interface $\cdot$ on co-processor sheet \\
+  Quadrature Encoders & 2 channels $\cdot$ 4-pin 2.54\,mm headers \\
+  Native Analogue ADC & 3$\times$ 2.54\,mm headers $\cdot$ STM32 ADC inputs \\
+  I$^2$C Analogue ADC & 4 channels $\cdot$ ADS1115IDGST (0x48) $\cdot$ 16-bit $\cdot$ I$^2$C \\
+  GPIO Expander & PCF8574DW (0x20) $\cdot$ 8-channel digital I/O $\cdot$ I$^2$C \\
+  I$^2$C Expansion Array & 16 independent ports $\cdot$ 2$\times$ TCA9548APWR mux (0x70/0x71) $\cdot$ 3$\times$ Qwiic + 13$\times$ 2.54\,mm $\cdot$ zero GPIO cost \\
+  USB & Type-C $\cdot$ USB4085-GF-A $\cdot$ on STM32 sheet \\
+  SWD Debug & 2.54\,mm header $\cdot$ STM32 programming and debug \\
+  UART Headers & 2$\times$ 2.54\,mm (debug + general purpose) \\
+  Shift Register & 74HC595 $\cdot$ 8-bit serial-in parallel-out $\cdot$ SPI-driven (ESP32-C3 sheet) \\
+  Power Input & XT60PW-M $\cdot$ reverse polarity protection (IRF4905 PMOS) $\cdot$ slide switch \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Power Architecture}
+
+The power system is designed around four independent rails, each serving a distinct subsystem. Separating VMOT from VSTEP allows brushed DC motors and stepper motors to be run at different voltages simultaneously. All rails are derived from a single protected XT60 input, switched by a common high-current slide switch.
+
+\subsection{Power Input and Protection}
+
+Power enters the board via an XT60PW-M connector. Input voltage should be at least 6\,V to allow headroom for the buck converter generating the 5\,V logic rail. Do not exceed 36\,V (the rated ceiling of the XL4016 buck converters).
+
+An IRF4905 P-channel power MOSFET provides reverse voltage protection on VIN before the power switch. MBR2045CT Schottky diodes are used for power path management. An SS14 diode handles USB/power path arbitration.
+
+\begin{warningbox}
+\textbf{Warning:} A high-current slide switch (OS102011MS2QN1) is placed after the reverse voltage protection circuit. It switches all rails simultaneously. When laying out the PCB, ensure the switch trace width is adequate for the total system current.
+\end{warningbox}
+
+\subsection{Power Rails}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{2cm} p{2.5cm} p{2.2cm} p{3cm} p{4.8cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Rail} &
+  \color{white}\textbf{Output} &
+  \color{white}\textbf{Current} &
+  \color{white}\textbf{Load} &
+  \color{white}\textbf{Key Component / Notes} \\
+  \midrule\endhead
+  VMOT   & Adj. 4.5--24\,V & 5\,A+ cont. & DC Motors M1--M4     & XL4016 step-down $\cdot$ trimmer pot on FB $\cdot$ 470\,\textmu F bulk $\times$4 \\
+  VSTEP  & Adj. 4.5--24\,V & 3\,A+ cont. & Steppers S1--S2      & XL4016 step-down $\cdot$ independent rail \\
+  +5\,V  & Fixed 5\,V      & 3\,A+ cont. & Servo rail, USB, ESP32-C3 & LM2596T-5 synchronous buck $\cdot$ 33\,\textmu H inductor \\
+  +3.3\,V& Fixed 3.3\,V    & 1\,A+ cont. & STM32, all ICs, sensors & AP2112K-3.3 LDO from 5\,V $\cdot$ all I$^2$C devices \\
+  \bottomrule
+\end{longtable}
+
+\begin{warningbox}
+\textbf{Warning:} VMOT and VSTEP are independent adjustable XL4016 buck converters. Each has its own trimmer potentiometer. Label both clearly on the PCB silkscreen to prevent accidental cross-connection.
+\end{warningbox}
+
+\subsection{Bulk Decoupling Capacitors}
+
+Each DRV8874 DC motor driver requires at least one electrolytic bulk capacitor rated for the VMOT voltage placed as close as possible to the VM pin. A minimum of 470\,\textmu F at 50\,V is specified per driver. Each TMC2209 stepper driver similarly requires bulk capacitance on the VSTEP rail. All ICs additionally receive 100\,nF ceramic decoupling capacitors.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Microcontrollers}
+
+\subsection{Primary MCU --- STM32G431RBTx}
+
+The STM32G431RBTx (U\_MCU1) is a 64-pin LQFP Cortex-M4F microcontroller from STMicroelectronics' G4 series. Running at 170\,MHz with a hardware FPU, it is purpose-built for motor control and digital power conversion applications.
+
+\begin{warningbox}
+\textbf{Note:} The schematic sheet is labelled \texttt{stm32} and uses file \texttt{esp32.kicad\_sch} — a legacy filename from the earlier ESP32-S3 design. The actual placed component is STM32G431RBTx.
+\end{warningbox}
+
+Key peripherals used on this board:
+
+\begin{itemize}
+  \item \textbf{Timers (TIM/HRTIM)} --- motor PWM generation for M1--M4 DC motor channels and S1--S2 stepper STEP pulses
+  \item \textbf{FDCAN} --- hardware CAN controller via SN65HVD230D transceiver
+  \item \textbf{I$^2$C} --- shared bus for PCA9685, ADS1115, PCF8574, TCA9548A $\times$2
+  \item \textbf{SPI} --- connection to ESP32-C3-MINI-1-N4 co-processor and 74HC595 shift register
+  \item \textbf{UART/USART} --- TMC2209 UART configuration interface + debug/general UART headers
+  \item \textbf{ADC} --- native ADC inputs broken out to 3$\times$ 2.54\,mm headers
+  \item \textbf{USB FS} --- via USB4085-GF-A Type-C connector
+  \item \textbf{SWD} --- programming and debug via 2.54\,mm header (J\_SWD1)
+\end{itemize}
+
+The BOOT0 pin is pulled to GND via a 10\,k$\Omega$ resistor with a MJTP1230 push-button to allow entry into the DFU bootloader. A separate MJTP1230 provides system RESET. A 100\,nF capacitor is placed on the $\overline{\text{NRST}}$ pin.
+
+\subsection{WiFi Co-processor --- ESP32-C3-MINI-1-N4}
+
+The ESP32-C3-MINI-1-N4 (on the \texttt{spi\_bus} sheet) provides 802.11b/g/n WiFi and Bluetooth 5 LE connectivity. It is connected to the STM32 via SPI, with the following interface signals:
+
+\begin{itemize}
+  \item \textbf{SPI\_SCK, SPI\_MOSI, SPI\_MISO} --- SPI bus to/from STM32
+  \item \textbf{SPI\_CS} --- chip select from STM32
+  \item \textbf{SPI\_LATCH} --- latch signal (also drives 74HC595 shift register)
+  \item \textbf{WIFI\_IRQ} --- interrupt output from ESP32-C3 to STM32
+\end{itemize}
+
+The ESP32-C3 also connects to the BMI270 IMU and the 74HC595 shift register on its sheet.
+
+\subsection{74HC595 Shift Register}
+
+A 74HC595 8-bit serial-in parallel-out shift register is placed on the \texttt{spi\_bus} sheet alongside the ESP32-C3. It is clocked via the SPI bus (or the SPI\_LATCH signal), providing 8 additional digital output lines without consuming extra GPIO on the STM32. Typical use cases include status LEDs, output expansion, and simple digital control signals.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Signal Interface Summary}
+
+The following table lists the hierarchical sheet pin names that cross between sheets in the KiCad schematic. Exact STM32 pin numbers are TBD (to be verified during PCB layout).
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{3.5cm} p{2cm} p{3cm} p{6cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Signal} &
+  \color{white}\textbf{Dir.} &
+  \color{white}\textbf{Sheet} &
+  \color{white}\textbf{Function} \\
+  \midrule\endhead
+  M1\_PWM / M1\_DIR & Out & stm32 \textrightarrow{} motor\_dc & DC motor M1 PWM + direction \\
+  M2\_PWM / M2\_DIR & Out & stm32 \textrightarrow{} motor\_dc & DC motor M2 PWM + direction \\
+  M3\_PWM / M3\_DIR & Out & stm32 \textrightarrow{} motor\_dc & DC motor M3 PWM + direction \\
+  M4\_PWM / M4\_DIR & Out & stm32 \textrightarrow{} motor\_dc & DC motor M4 PWM + direction \\
+  S1\_STEP/DIR/EN   & Out & stm32 \textrightarrow{} motor\_stepper & Stepper S1 control \\
+  S2\_STEP/DIR/EN   & Out & stm32 \textrightarrow{} motor\_stepper & Stepper S2 control \\
+  TMC\_UART\_TX/RX  & Bidir & stm32 $\leftrightarrow$ motor\_stepper & TMC2209 UART config bus \\
+  I2C\_SCL/SDA      & Out & stm32 \textrightarrow{} i2c\_bus, motor\_servo & Shared I$^2$C bus \\
+  SPI\_CS/MOSI/MISO/SCK & Bidir & stm32 $\leftrightarrow$ spi\_bus & SPI to ESP32-C3 + 74HC595 \\
+  SPI\_LATCH        & Out & stm32 \textrightarrow{} spi\_bus & 74HC595 latch \\
+  WIFI\_IRQ         & In  & spi\_bus \textrightarrow{} stm32 & ESP32-C3 interrupt \\
+  IMU\_INT1         & In  & spi\_bus \textrightarrow{} stm32 & BMI270 interrupt \\
+  GPIO\_INT         & In  & i2c\_bus \textrightarrow{} stm32 & PCF8574 interrupt \\
+  IPROPI\_M1--M4    & In  & motor\_dc \textrightarrow{} i2c\_bus & DRV8874 current sense to ADS1115 \\
+  VMOT              & Pwr & power \textrightarrow{} motor\_dc & DC motor power rail \\
+  VSTEP             & Pwr & power \textrightarrow{} motor\_stepper & Stepper power rail \\
+  VSERVO            & Pwr & power \textrightarrow{} motor\_servo & Servo power rail \\
+  VBUS / ADC\_VIN   & Pwr & power \textrightarrow{} stm32 & USB bus power + ADC reference \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Motor Control}
+
+\subsection{DC Brushed Motors --- DRV8874PWPR \texorpdfstring{$\times$}{x} 4}
+
+Four DRV8874PWPR H-bridge motor driver ICs (U\_M1--U\_M4) provide control for four independent brushed DC motor channels (M1--M4). The DRV8874 is a fully integrated H-bridge with hardware overcurrent protection, thermal shutdown, and undervoltage lockout.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{5cm} p{10cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Parameter} & \color{white}\textbf{Value / Detail} \\
+  \midrule\endhead
+  Part number & DRV8874PWPR (HTSSOP-16) \\
+  Supply voltage (VM) & 4.5\,V -- 37\,V (VMOT rail) \\
+  Continuous current & 2.1\,A per channel \\
+  Peak current & 6\,A per channel \\
+  Control M1 & M1\_PWM (PWM/Phase), M1\_DIR (DIR/Enable) from STM32 \\
+  Control M2 & M2\_PWM, M2\_DIR \\
+  Control M3 & M3\_PWM, M3\_DIR \\
+  Control M4 & M4\_PWM, M4\_DIR \\
+  Output connector & 2-pin 5.08\,mm screw terminal per channel \\
+  nFAULT handling & All 4 nFAULT pins wired-OR open-drain \textrightarrow{} red indicator LED (LTST-C190KRKT). No MCU GPIO consumed. \\
+  Bulk capacitance & 470\,\textmu F 50\,V electrolytic per driver (C\_VM1--C\_VM4), close to VM pin \\
+  Current sense & IPROPI output routed to ADS1115 (A6--A9) for per-motor current monitoring \\
+  \bottomrule
+\end{longtable}
+
+\subsection{NEMA 17 Stepper Motors --- TMC2209-LA-T \texorpdfstring{$\times$}{x} 2}
+
+Two TMC2209-LA-T silent stepper motor driver ICs (U\_S1--U\_S2) drive two NEMA\,17 bipolar stepper motors from the independent VSTEP rail. The TMC2209 features StealthChop2 for near-silent operation and SpreadCycle for high-torque applications, configurable via UART.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{5cm} p{10cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Parameter} & \color{white}\textbf{Value / Detail} \\
+  \midrule\endhead
+  Part number & TMC2209-LA-T (QFN-28) \\
+  Supply voltage (VM) & 4.5\,V -- 36\,V (VSTEP rail --- independent from VMOT) \\
+  RMS current & 2.0\,A RMS per channel \\
+  Peak current & 2.8\,A peak per channel \\
+  Control S1 & S1\_STEP, S1\_DIR, S1\_EN (active LOW) \\
+  Control S2 & S2\_STEP, S2\_DIR, S2\_EN (active LOW) \\
+  EN pull-up & 10\,k$\Omega$ to 3.3\,V --- drivers disabled by default at power-on \\
+  UART config & TMC\_UART\_TX/RX to STM32 (optional per-application current tuning) \\
+  Bulk capacitance & 100\,\textmu F 35\,V+ per driver \\
+  \bottomrule
+\end{longtable}
+
+\begin{infobox}
+\textbf{Note:} The VSTEP rail is intentionally separate from VMOT. This allows, for example, 12\,V NEMA\,17 operation alongside 6\,V DC gearmotors simultaneously.
+\end{infobox}
+
+\subsection{Servo Motors --- PCA9685PW \texorpdfstring{$\times$}{x} 16}
+
+A PCA9685PW 16-channel 12-bit PWM driver IC provides servo control for up to 16 hobby servo channels simultaneously via I$^2$C. All 16 PWM outputs are broken out to 3-pin 2.54\,mm servo headers carrying GND, VSERVO, and PWM signal.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{5cm} p{10cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Parameter} & \color{white}\textbf{Value / Detail} \\
+  \midrule\endhead
+  Part number & PCA9685PW (TSSOP-28) \\
+  I$^2$C address & 0x40 (ADDR pins \textrightarrow{} GND) \\
+  PWM resolution & 12-bit (4096 steps) \\
+  PWM frequency & Configurable 24\,Hz -- 1526\,Hz (typically 50\,Hz for standard servos) \\
+  Servo voltage & VSERVO (derived from +5\,V rail via MBR2045CT protection diode) \\
+  Servo headers & 3-pin 2.54\,mm GND / VSERVO / PWM (16 channels) \\
+  Control interface & I$^2$C via STM32 I$^2$C bus \\
+  \bottomrule
+\end{longtable}
+
+\subsection{Motor Compatibility}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{6cm} p{2cm} p{7cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Motor Type} &
+  \color{white}\textbf{Compatible?} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  TT yellow gearmotors (2WD/4WD) & $\checkmark$ & Common chassis motors --- ideal fit \\
+  Pololu micro/mini DC gearmotors & $\checkmark$ & Well within DRV8874 2.1\,A continuous rating \\
+  25\,mm / 37\,mm DC gearmotors   & $\checkmark$* & Stall may approach 6\,A peak --- current limiting recommended \\
+  775-size DC motors               & $\times$  & Exceeds DRV8874 continuous rating --- use external driver \\
+  Hobby servos (3--8.4\,V)         & $\checkmark$ & PCA9685 servo rail, up to 16 channels simultaneously \\
+  NEMA\,17 stepper motors          & $\checkmark$ & TMC2209 StealthChop2 $\cdot$ up to 2\,A RMS / 2.8\,A peak \\
+  CAN motor controllers (VESC, ODrive) & $\checkmark$ & FDCAN via SN65HVD230D $\cdot$ ISO\,11898-1 \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Communication Interfaces}
+
+\subsection{\texorpdfstring{I$^2$C}{I2C} Bus}
+
+A single I$^2$C bus from the STM32 carries all on-board I$^2$C peripherals plus the TCA9548A expansion array. Pull-up resistors of 4.7\,k$\Omega$ to 3.3\,V are provided on-board.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{3cm} p{1.5cm} p{4cm} p{6cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Device} &
+  \color{white}\textbf{Addr.} &
+  \color{white}\textbf{Function} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  PCA9685PW         & 0x40 & 16-ch servo PWM driver   & Main bus --- always visible \\
+  ADS1115IDGST      & 0x48 & 4-ch 16-bit ADC          & Main bus --- ADDR\textrightarrow{}GND \\
+  PCF8574DW         & 0x20 & 8-ch digital GPIO expander & Main bus --- INT to STM32 (GPIO\_INT) \\
+  OLED display      & 0x3C & 0.96\,'' display (user-supplied) & 4-pin 2.54\,mm header (J\_OLED1) \\
+  TCA9548APWR Mux\,\#1 & 0x70 & I$^2$C mux --- ports 0--7 & Main bus --- always visible \\
+  TCA9548APWR Mux\,\#2 & 0x71 & I$^2$C mux --- ports 8--15 & Main bus --- always visible \\
+  Expansion 0--15   & Any  & User I$^2$C devices       & Behind mux --- no address conflicts \\
+  \bottomrule
+\end{longtable}
+
+\begin{infobox}
+\textbf{Note:} The BMI270 IMU is on \textbf{SPI}, not I$^2$C. It is located on the \texttt{spi\_bus} sheet alongside the ESP32-C3. The main I$^2$C bus has seven on-board devices; no address conflicts exist between them.
+\end{infobox}
+
+\subsection{CAN Bus (FDCAN)}
+
+CAN bus support is implemented using the STM32G431's built-in FDCAN controller, conforming to ISO\,11898-1. An SN65HVD230D 3.3\,V CAN transceiver provides the physical layer.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{4cm} p{11cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Parameter} & \color{white}\textbf{Value / Detail} \\
+  \midrule\endhead
+  Protocol & ISO\,11898-1 (CAN 2.0A/B / CAN FD capable) via STM32 FDCAN hardware \\
+  Transceiver & SN65HVD230D (SOIC-8, 3.3\,V compatible, up to 1\,Mbps) \\
+  Bus connector & 5.08\,mm 2-pin screw terminal (J\_CAN1) --- CANH / CANL \\
+  Termination & 120\,$\Omega$ resistor (R\_CAN\_TERM1) on board \\
+  Logic level & 3.3\,V --- directly compatible with STM32G431 GPIO \\
+  Use cases & CAN motor controllers (VESC, ODrive), robot arm joints, inter-board comms \\
+  \bottomrule
+\end{longtable}
+
+\begin{warningbox}
+\textbf{Warning:} Do not substitute the SN65HVD230D with a 5\,V transceiver such as the MCP2551. The STM32G431 GPIO pins are 3.3\,V tolerant; a 5\,V transceiver output will permanently damage the MCU.
+\end{warningbox}
+
+\subsection{USB (Type-C)}
+
+A USB4085-GF-A USB Type-C connector (X1) on the STM32 sheet provides USB Full-Speed connectivity directly to the STM32G431's USB FS peripheral. This is used for firmware programming (DFU bootloader via BOOT0 button) and virtual COM port (VCP) communication.
+
+\subsection{SWD Debug Interface}
+
+A 4-pin 2.54\,mm SWD header (J\_SWD1) exposes the STM32G431's Serial Wire Debug interface (SWDIO / SWDCLK / GND / 3.3\,V). This supports programming and live debugging via ST-LINK, J-Link, or compatible probe.
+
+\subsection{UART Headers}
+
+\begin{itemize}
+  \item \textbf{J\_UART\_DBG1} --- UART debug port (4-pin 2.54\,mm). Intended for serial monitor and low-level firmware diagnostics.
+  \item \textbf{J\_UART2} --- General-purpose UART header (4-pin 2.54\,mm). Use for GPS (NMEA), LiDAR (RPLIDAR, TF-Luna), or any UART-based peripheral.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Sensing and Analogue Inputs}
+
+\subsection{Inertial Measurement Unit --- BMI270}
+
+The BMI270 6-axis IMU is placed on the \texttt{spi\_bus} sheet alongside the ESP32-C3-MINI-1-N4. It provides 3-axis accelerometer and 3-axis gyroscope data via SPI. An interrupt output (IMU\_INT1) is routed to the STM32 for data-ready notification.
+
+\begin{itemize}
+  \item Interface: SPI
+  \item Interrupt: IMU\_INT1 \textrightarrow{} STM32
+  \item Firmware: BMI270 SPI driver recommended; Madgwick or Mahony filter for attitude estimation
+\end{itemize}
+
+\subsection{Native Analogue Inputs --- ADC Headers}
+
+Three 2.54\,mm headers (J\_ADC1, J\_ADC2, J\_ADC3) break out STM32G431 ADC input channels. Exact GPIO assignments are to be determined during schematic finalisation and PCB layout.
+
+\begin{itemize}
+  \item Pinout: GND / 3.3\,V / SIG (3-pin headers)
+  \item Resolution: 12-bit (STM32 ADC1/ADC2)
+\end{itemize}
+
+\subsection{\texorpdfstring{I$^2$C}{I2C} Analogue Inputs --- ADS1115IDGST}
+
+The ADS1115IDGST 16-bit I$^2$C ADC (U\_ADC1) provides four additional analogue channels (A6--A9) at significantly higher resolution than the native ADC. The DRV8874 IPROPI current sense outputs are routed here for per-motor current monitoring.
+
+\begin{itemize}
+  \item I$^2$C address: 0x48 (ADDR\textrightarrow{}GND)
+  \item Resolution: 16-bit ($\pm$32767 counts), programmable gain: $\pm$0.256\,V to $\pm$6.144\,V FSR
+  \item IPROPI inputs: IPROPI\_M1--M4 from DRV8874 \textrightarrow{} ADS1115 (via i2c\_bus sheet)
+\end{itemize}
+
+\subsection{PCF8574DW --- Digital GPIO Expander}
+
+The PCF8574DW (U\_GPIO1) provides 8 additional digital I/O lines via I$^2$C at address 0x20. An INT signal is routed to the STM32 (GPIO\_INT) for interrupt-driven pin change notification. A pull-up resistor (R\_GPIO\_INT1) is placed on the INT line.
+
+\subsection{Quadrature Encoders}
+
+Two quadrature encoder channels are supported. Each channel provides a 4-pin 2.54\,mm header (J\_ENC1, J\_ENC2) with pinout GND / 3.3\,V / Chan-A / Chan-B.
+
+\subsection{GPIO Header}
+
+A general-purpose GPIO header (J\_GPIO1) breaks out additional STM32 GPIO pins for user-defined digital I/O.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{\texorpdfstring{I$^2$C}{I2C} Expansion Array}
+
+Two TCA9548APWR 8-channel I$^2$C multiplexers (U\_MUX1 at 0x70, U\_MUX2 at 0x71) are added to the main I$^2$C bus. Each provides 8 independently switched downstream channels, giving 16 expansion ports total. Each port is a fully isolated I$^2$C segment --- devices on different ports can share the same I$^2$C address without conflict.
+
+\subsection{Expansion Port Layout}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{1.2cm} p{3.5cm} p{3.5cm} p{2.5cm} p{4cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Port} &
+  \color{white}\textbf{Connector} &
+  \color{white}\textbf{Mux Channel} &
+  \color{white}\textbf{Isolation} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  0  & QWIIC JST\,SH 4-pin & TCA9548A \#1 Ch0 & Independent & QWIIC port 1 on Mux\,\#1 \\
+  1  & QWIIC JST\,SH 4-pin & TCA9548A \#1 Ch1 & Independent & QWIIC port 2 on Mux\,\#1 \\
+  2  & QWIIC JST\,SH 4-pin & TCA9548A \#1 Ch2 & Independent & QWIIC port 3 on Mux\,\#1 \\
+  3  & 2.54\,mm 4-pin      & TCA9548A \#1 Ch3 & Independent & GND/3.3\,V/SDA/SCL \\
+  4  & 2.54\,mm 4-pin      & TCA9548A \#1 Ch4 & Independent & \\
+  5  & 2.54\,mm 4-pin      & TCA9548A \#1 Ch5 & Independent & \\
+  6  & 2.54\,mm 4-pin      & TCA9548A \#1 Ch6 & Independent & \\
+  7  & 2.54\,mm 4-pin      & TCA9548A \#1 Ch7 & Independent & \\
+  8  & QWIIC JST\,SH 4-pin & TCA9548A \#2 Ch0 & Independent & QWIIC port 1 on Mux\,\#2 \\
+  9  & 2.54\,mm 4-pin      & TCA9548A \#2 Ch1 & Independent & \\
+  10 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch2 & Independent & \\
+  11 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch3 & Independent & \\
+  12 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch4 & Independent & \\
+  13 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch5 & Independent & \\
+  14 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch6 & Independent & \\
+  15 & 2.54\,mm 4-pin      & TCA9548A \#2 Ch7 & Independent & \\
+  \bottomrule
+\end{longtable}
+
+\subsection{TCA9548A Architecture}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{5cm} p{10cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Parameter} & \color{white}\textbf{Value / Detail} \\
+  \midrule\endhead
+  Part number & TCA9548APWR (TSSOP-24) \\
+  I$^2$C address Mux\,\#1 & 0x70 (A2/A1/A0 = 0/0/0 \textrightarrow{} GND) \\
+  I$^2$C address Mux\,\#2 & 0x71 (A2/A1/A0 = 0/0/1 \textrightarrow{} Mux\,\#2 A0 \textrightarrow{} 3.3\,V) \\
+  Channels per IC & 8 independent I$^2$C downstream channels \\
+  Total expansion ports & 16 (8 from Mux\,\#1 + 8 from Mux\,\#2) \\
+  Supply voltage & 3.3\,V \\
+  Pull-up resistors & 4.7\,k$\Omega$ on SDA/SCL of main bus only (mux outputs are active) \\
+  Address conflict risk & None between ports --- each port is on an independently switched segment \\
+  Reset pull-ups & 10\,k$\Omega$ pull-ups on /RESET pins of both TCA9548A ICs \\
+  \bottomrule
+\end{longtable}
+
+\subsection{Reverse-ARP HAL --- Automatic Peripheral Discovery}
+
+The firmware HAL implements a reverse-ARP discovery mechanism for the expansion array. On startup, the HAL iterates through all 16 expansion ports, temporarily enables each channel, performs an I$^2$C scan, records any device addresses found, and then disables the channel. The result is a port map that application code can query.
+
+\begin{itemize}
+  \item On startup: scan all 16 ports \textrightarrow{} build port map \textrightarrow{} log device addresses per port
+  \item At runtime: request \texttt{i2c\_port\_N} \textrightarrow{} HAL enables TCA9548A channel \textrightarrow{} performs transaction \textrightarrow{} disables channel
+  \item No address conflicts possible --- HAL enforces single-channel activation
+\end{itemize}
+
+\begin{warningbox}
+\textbf{Warning:} Only one TCA9548A channel should be active at any time. The HAL enforces this. Do not manually write to the TCA9548A channel registers from application code while the HAL is active.
+\end{warningbox}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Connector Reference}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{3cm} p{2.5cm} p{1.5cm} p{2.5cm} p{5cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Ref} &
+  \color{white}\textbf{Type} &
+  \color{white}\textbf{Qty} &
+  \color{white}\textbf{Pitch} &
+  \color{white}\textbf{Function / Pinout} \\
+  \midrule\endhead
+  J\_XT60             & XT60PW-M      & 1  & XT60       & VIN power input \\
+  J\_CAN1             & Screw terminal& 1  & 5.08\,mm 2-pin & CAN: CANH / CANL \\
+  J\_ENC1, J\_ENC2    & Pin header    & 2  & 2.54\,mm 4-pin & Encoders: GND / 3.3\,V / Chan-A / Chan-B \\
+  J\_UART\_DBG1       & Pin header    & 1  & 2.54\,mm 4-pin & UART debug: GND / 3.3\,V / TX / RX \\
+  J\_UART2            & Pin header    & 1  & 2.54\,mm 4-pin & UART general: GND / 3.3\,V / TX / RX \\
+  J\_OLED1            & Pin header    & 1  & 2.54\,mm 4-pin & OLED: GND / 3.3\,V / SDA / SCL \\
+  J\_SWD1             & Pin header    & 1  & 2.54\,mm 4-pin & SWD: GND / 3.3\,V / SWDIO / SWDCLK \\
+  J\_ADC1--J\_ADC3    & Pin header    & 3  & 2.54\,mm 3-pin & ADC: GND / 3.3\,V / SIG \\
+  J\_GPIO1            & Pin header    & 1  & 2.54\,mm 4-pin & Direct GPIO header \\
+  Servo headers       & Pin header    & 16 & 2.54\,mm 3-pin & Servo: GND / VSERVO / PWM \\
+  Motor terminals     & Screw terminal& 4  & 5.08\,mm 2-pin & DC motor outputs M1--M4 \\
+  Stepper headers     & Pin header    & 2  & 2.54\,mm 4-pin & STEP/DIR/EN per stepper \\
+  J\_MUX1\_CH0--CH7  & Mixed         & 8  & QWIIC / 2.54\,mm & I$^2$C expansion ports 0--7 \\
+  J\_MUX2\_CH0--CH7  & Mixed         & 8  & QWIIC / 2.54\,mm & I$^2$C expansion ports 8--15 \\
+  X1                  & USB Type-C    & 1  & USB4085-GF-A & USB FS / DFU programming \\
+  H1--H4              & Mounting hole & 4  & M3 pad       & Grounded M3 mounting holes \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Bill of Materials (v0.8)}
+
+Estimated mid-range unit pricing at Qty\,=\,1. Excludes PCB assembly labour, shipping, and import duties. Rows highlighted in blue are new or significantly changed in v0.8.
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{0.5cm} p{4.5cm} p{3.5cm} p{0.8cm} p{5.5cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{\#} &
+  \color{white}\textbf{Component} &
+  \color{white}\textbf{Part Number} &
+  \color{white}\textbf{Qty} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  \rowcolor{newrow}1 & STM32G431RBTx MCU & STM32G431RBTx (LQFP-64) & 1 & Primary MCU, 170\,MHz Cortex-M4F \\
+  \rowcolor{newrow}2 & ESP32-C3-MINI-1-N4 & ESP32-C3-MINI-1-N4 & 1 & WiFi/BT co-processor, SPI interface \\
+  3 & DRV8874 H-Bridge & DRV8874PWPR (HTSSOP-16) & 4 & DC motors M1--M4 \\
+  4 & SN65HVD230 CAN & SN65HVD230D (SOIC-8) & 1 & CAN bus transceiver \\
+  5 & CAN screw terminal & 5.08\,mm 2-pin & 1 & CANH / CANL \\
+  6 & nFAULT LED & LTST-C190KRKT Red & 1 & DRV8874 fault indicator \\
+  7 & PCA9685 servo driver & PCA9685PW (TSSOP-28) & 1 & 16-ch PWM servo \\
+  8 & ADS1115 ADC & ADS1115IDGST (MSOP-10) & 1 & 16-bit I$^2$C ADC, motor current sense \\
+  9 & PCF8574 GPIO expander & PCF8574DW (SOIC-16) & 1 & 8-ch digital I/O expander \\
+  10 & TCA9548A I$^2$C Mux & TCA9548APWR (TSSOP-24) & 2 & Mux\,\#1 (0x70), Mux\,\#2 (0x71) \\
+  11 & QWIIC header & JST\,SH SM04B-SRSS-TB & 3 & I$^2$C expansion QWIIC ports \\
+  12 & Expansion 2.54\,mm headers & 4-pin 2.54\,mm & 13 & I$^2$C expansion headers \\
+  \rowcolor{newrow}13 & BMI270 IMU & BMI270 & 1 & 6-axis IMU, SPI interface \\
+  \rowcolor{newrow}14 & 74HC595 shift register & 74HC595 & 1 & 8-bit serial output expander \\
+  \rowcolor{newrow}15 & USB Type-C connector & USB4085-GF-A & 1 & USB FS / DFU \\
+  \rowcolor{newrow}16 & XT60 power connector & XT60PW-M & 1 & Main power input \\
+  \rowcolor{newrow}17 & IRF4905 PMOS & IRF4905 & 1 & Reverse polarity protection \\
+  18 & MBR2045CT Schottky & MBR2045CT & 1+ & Power path protection \\
+  19 & SS14 Schottky diode & SS14 & 1 & USB power path \\
+  20 & OS102011MS2QN1 switch & OS102011MS2QN1 & 1 & Main power slide switch \\
+  21 & MJTP1230 pushbutton & MJTP1230 & 2 & BOOT0 + RESET buttons \\
+  22 & XL4016 buck converter & XL4016 & 2 & VMOT + VSTEP adjustable rails \\
+  23 & LM2596T-5 buck & LM2596T-5 & 1 & Fixed 5\,V logic rail \\
+  24 & AP2112K-3.3 LDO & AP2112K-3.3 (SOT-25) & 1 & Fixed 3.3\,V logic \\
+  25 & 33\,\textmu H / 4\,A inductor & -- & 1 & 5\,V buck output filter \\
+  26 & 47\,\textmu H / 12\,A inductor & -- & 2 & VMOT / VSTEP buck output filters \\
+  27 & Electrolytic cap 470\,\textmu F 50\,V & -- & 3+ & Motor/bulk capacitors \\
+  28 & Electrolytic cap 680\,\textmu F 50\,V & -- & 1 & VIN bulk input cap \\
+  29 & Electrolytic cap 220\,\textmu F 25\,V & -- & 1 & 5\,V rail bulk cap \\
+  30 & Bourns 3296W trimmer 10\,k$\Omega$ & Bourns 3296W & 2+ & VMOT / VSTEP feedback dividers \\
+  31 & 100\,nF ceramic 0603 ($\times$25) & GRM188R71C104 & 25 & IC bypass decoupling \\
+  32 & Resistor assortment 0603 ($\times$40) & Misc. & 40 & Pull-ups, dividers, LED limiting \\
+  33 & 2-layer PCB \textasciitilde{}130$\times$95\,mm & JLCPCB / PCBWay & 1 & Design TBD \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Recommended Improvements}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{4cm} p{2cm} p{9cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Improvement} &
+  \color{white}\textbf{Priority} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  Battery voltage monitor & High & Resistor divider on VIN \textrightarrow{} any ADC header. Zero GPIO cost. \\
+  Per-motor IPROPI current sense & High & DRV8874 IPROPI \textrightarrow{} ADS1115. Already routed in schematic (IPROPI\_M1--M4). \\
+  LiPo XT60 connector & Medium & XT60PW-M already placed. Consider adding balancer connector header. \\
+  On-board buzzer & Low & Requires an available GPIO. Assign from freed signals during layout. \\
+  WS2812B RGB status LED & Low & ESP32-C3 has spare GPIOs --- can drive RGB LED without loading STM32. \\
+  CAN bus termination option & Medium & 120\,$\Omega$ R\_CAN\_TERM1 already placed. Add solder-bridge jumper to enable/disable. \\
+  \bottomrule
+\end{longtable}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Open Questions and Next Steps}
+
+\subsection{Verification Required}
+
+\begin{itemize}
+  \item Confirm all STM32G431RBTx pin assignments in schematic (ESP32-S3 pin table is obsolete)
+  \item Prototype I$^2$C bus --- verify all 6 on-board device addresses and pull-up values at full loading
+  \item Prototype CAN bus --- verify SN65HVD230D wiring and FDCAN firmware configuration (bitrate, mode)
+  \item Verify TCA9548A address selection resistors for 0x70 (all pins\textrightarrow{}GND) and 0x71 (A0\textrightarrow{}3.3\,V)
+  \item Test SPI interface between STM32 and ESP32-C3 --- confirm protocol, clock speed, and IRQ behaviour
+  \item Confirm BMI270 SPI routing and interrupt (IMU\_INT1) behaviour
+\end{itemize}
+
+\subsection{KiCad / PCB Design Tasks}
+
+\begin{itemize}
+  \item Review and clean up \texttt{esp32.kicad\_sch} --- rename sheet from ``stm32'' to something less confusing; rename file from \texttt{esp32.kicad\_sch} if desired
+  \item Populate the empty \texttt{connectors.kicad\_sch} sheet or remove it from the hierarchy
+  \item Assign and verify all footprints in the KiCad project
+  \item Generate netlist and begin PCB layout
+  \item Separate ground planes: high-current motor ground physically isolated from logic ground with single star-point
+  \item Ensure VMOT and VSTEP rails are clearly labelled on silkscreen
+  \item Plan PCB size to accommodate all expansion port headers ($\sim$130$\times$95\,mm estimated)
+  \item Add solder-bridge jumper for CAN 120\,$\Omega$ termination
+  \item Mark BOOT0 / RESET buttons clearly on silkscreen
+\end{itemize}
+
+\subsection{Firmware}
+
+\begin{itemize}
+  \item STM32 HAL/LL bringup: I$^2$C scan (all 16 expansion ports), PWM test, CAN loopback, UART echo
+  \item TMC2209 UART configuration driver for per-application current tuning
+  \item BMI270 SPI driver + Madgwick / Mahony filter for attitude estimation
+  \item ESP32-C3 SPI bridge firmware --- define message protocol to/from STM32
+  \item Implement reverse-ARP HAL for TCA9548A expansion array
+  \item Define HAL API: \texttt{i2c\_port\_scan\_all()}, \texttt{i2c\_port\_read(port, addr, reg, len)}, \texttt{i2c\_port\_write(port, addr, reg, data, len)}
+  \item Generate full LCSC / Mouser priced BOM from this document for procurement
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+
+\section{\texorpdfstring{I$^2$C}{I2C} Address Map}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{2.5cm} p{3.5cm} p{3cm} p{6cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Address} &
+  \color{white}\textbf{Device} &
+  \color{white}\textbf{Bus Location} &
+  \color{white}\textbf{Notes} \\
+  \midrule\endhead
+  0x20 & PCF8574DW         & Main bus (fixed) & 8-ch digital GPIO expander \\
+  0x3C & OLED display       & Main bus (fixed) & 0.96\,'' OLED header --- user-supplied \\
+  0x40 & PCA9685PW         & Main bus (fixed) & 16-ch servo PWM driver \\
+  0x48 & ADS1115IDGST      & Main bus (fixed) & 4$\times$ 16-bit analogue ADC \\
+  0x70 & TCA9548APWR Mux\,\#1 & Main bus (fixed) & 8-ch I$^2$C mux --- ports 0--7 \\
+  0x71 & TCA9548APWR Mux\,\#2 & Main bus (fixed) & 8-ch I$^2$C mux --- ports 8--15 \\
+  Various & User devices   & Expansion ports 0--15 & No conflicts between ports \\
+  \midrule
+  \multicolumn{4}{l}{\textit{Not on I$^2$C:} BMI270 (SPI, spi\_bus sheet) --- \textit{no longer on the I$^2$C bus.}} \\
+  \bottomrule
+\end{longtable}
+
+\section{Schematic Sheet Structure}
+
+\rowcolors{2}{rowalt}{white}
+\begin{longtable}{p{3.5cm} p{4.5cm} p{7cm}}
+  \toprule
+  \rowcolor{headergray}\color{white}\textbf{Sheet Name} &
+  \color{white}\textbf{File} &
+  \color{white}\textbf{Contents} \\
+  \midrule\endhead
+  Root         & \texttt{Robodev.kicad\_sch}   & Top-level interconnect, mounting holes (H1--H4) \\
+  power        & \texttt{power.kicad\_sch}      & XT60 input, IRF4905 reverse protect, slide switch, XL4016$\times$2, LM2596T-5, AP2112K-3.3, all bulk caps \\
+  stm32        & \texttt{esp32.kicad\_sch}      & STM32G431RBTx, SN65HVD230D CAN, USB4085-GF-A, SWD header, UART headers, ADC headers, encoder headers, GPIO header, BOOT0/RESET buttons \\
+  spi\_bus     & \texttt{spi\_bus.kicad\_sch}   & ESP32-C3-MINI-1-N4, BMI270 IMU, 74HC595 shift register \\
+  i2c\_bus     & \texttt{i2c\_bus.kicad\_sch}   & TCA9548APWR$\times$2 muxes, ADS1115IDGST ADC, PCF8574DW GPIO expander, all I$^2$C expansion headers (QWIIC + 2.54\,mm), OLED header \\
+  motor\_dc    & \texttt{motor\_dc.kicad\_sch}  & DRV8874PWPR$\times$4, motor screw terminals, nFAULT LED, bulk capacitors \\
+  motor\_stepper & \texttt{motor\_stepper.kicad\_sch} & TMC2209-LA-T$\times$2, stepper output headers \\
+  motor\_servo & \texttt{motor\_servo.kicad\_sch} & PCA9685PW, 16$\times$ servo headers \\
+  connectors   & \texttt{connectors.kicad\_sch} & (Currently empty --- reserved for future use) \\
+  \bottomrule
+\end{longtable}
+
+\end{document}
