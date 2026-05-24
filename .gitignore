@@ -64,3 +64,8 @@ Icon?
 *.tmp
 *.swp
 *.swo
+
+# =========================
+# Claude Code / AI tools
+# =========================
+.claude/

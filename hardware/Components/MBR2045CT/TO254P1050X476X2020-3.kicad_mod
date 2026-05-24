@@ -1,0 +1,234 @@
+(footprint "TO254P1050X476X2020-3"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -2.325 -3.374 0)
+		(layer "F.SilkS")
+		(uuid "37a396e9-e7f6-4645-be6d-afa3c6249957")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TO254P1050X476X2020-3"
+		(at 7.835 3.486 0)
+		(layer "F.Fab")
+		(uuid "5f645701-301e-422d-9aac-8d12f56ffe38")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9cb92efb-b336-46ee-b335-036e6fe14429")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "92d74b4f-dec2-420c-b61f-14b869a77f9c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.25 -2.295)
+		(end 5.25 -2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "02c45ee6-4c48-41f3-802d-b47fbfeec95c")
+	)
+	(fp_line
+		(start -5.25 2.295)
+		(end -5.25 -2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dcc270b4-6899-4b0e-977e-25da9663fa80")
+	)
+	(fp_line
+		(start 5.25 -2.295)
+		(end 5.25 2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ea914d53-4675-4c9f-9268-ef660540fbd5")
+	)
+	(fp_line
+		(start 5.25 2.295)
+		(end -5.25 2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "74630144-1f89-4535-b9b4-7154dec4cb72")
+	)
+	(fp_circle
+		(center -6 0.453)
+		(end -5.9 0.453)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "1d29ffe2-d7d9-4c96-b90c-c3dc05e0aa73")
+	)
+	(fp_line
+		(start -5.5 -2.545)
+		(end -5.5 2.545)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c1de20ae-e82e-4aa9-81db-7655e3cf656a")
+	)
+	(fp_line
+		(start -5.5 2.545)
+		(end 5.5 2.545)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7505665f-f1e2-4e85-ac0b-de77db9df236")
+	)
+	(fp_line
+		(start 5.5 -2.545)
+		(end -5.5 -2.545)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "59de5c33-c781-4470-8270-02984a77ab24")
+	)
+	(fp_line
+		(start 5.5 2.545)
+		(end 5.5 -2.545)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9682c72a-46ca-47d5-9e8d-451f8c1b2fb3")
+	)
+	(fp_line
+		(start -5.25 -2.295)
+		(end 5.25 -2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c55d034a-5f8d-4179-8ef1-0a2bf2e067a2")
+	)
+	(fp_line
+		(start -5.25 2.295)
+		(end -5.25 -2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "007991e7-4646-4f6e-a409-a050f36303ed")
+	)
+	(fp_line
+		(start 5.25 -2.295)
+		(end 5.25 2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3ce1b0f8-db29-41c7-9ab5-9f0cc83f41d6")
+	)
+	(fp_line
+		(start 5.25 2.295)
+		(end -5.25 2.295)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0b3cf627-7c19-46fb-8f8e-a759be2d1213")
+	)
+	(fp_circle
+		(center -6 0.453)
+		(end -5.9 0.453)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "4acb11ff-a48a-46af-9e34-9ca665f371ea")
+	)
+	(pad "1" thru_hole rect
+		(at -2.54 0.453)
+		(size 1.94 1.94)
+		(drill 1.29)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "4e0ba565-ed86-4ebe-86ea-be5835c57a41")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0.453)
+		(size 1.94 1.94)
+		(drill 1.29)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "21119494-d284-443d-8105-2fffb20694f2")
+	)
+	(pad "3" thru_hole circle
+		(at 2.54 0.453)
+		(size 1.94 1.94)
+		(drill 1.29)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "f07750d0-12ec-4ecf-8bc4-4adf14026b75")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/MBR2045CT/MBR2045CT.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
