@@ -32,7 +32,8 @@ For larger changes (new subsystems, significant redesigns), open an issue first 
 ├── firmware/        STM32 HAL + ESP-IDF firmware (not yet started)
 ├── docs/
 │   ├── Datasheets/  Component datasheets
-│   └── RoboDevDesignSpec.docx
+│   ├── RoboDevDesignSpec.tex  Design specification (source)
+│   └── RoboDevDesignSpec.pdf  Design specification (rendered)
 └── README.md
 ```
 
