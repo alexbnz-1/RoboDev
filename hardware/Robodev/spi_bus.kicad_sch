@@ -5286,6 +5286,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 279.4 77.4699 0)
 			(effects
@@ -5355,6 +5364,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 31.75 91.44 0)
 			(effects
@@ -5435,6 +5453,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 31.75 44.45 0)
 			(effects
@@ -5516,6 +5543,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 213.36 157.4799 0)
 			(effects
@@ -5586,6 +5622,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "WiFi UART 2.54mm"
 			(at 80.01 210.8199 0)
 			(effects
@@ -5728,6 +5773,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 77.47 116.84 0)
 			(effects
@@ -5808,6 +5862,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "ESP32-C3-MINI-1-N4"
 			(at 72.39 156.21 0)
 			(effects
@@ -6174,6 +6237,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 77.47 44.45 0)
 			(effects
@@ -6254,6 +6326,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 77.47 91.44 0)
 			(effects
@@ -6402,6 +6483,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 107.95 153.6699 0)
 			(effects
@@ -6471,6 +6561,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 227.33 83.82 90)
 			(effects
@@ -6673,6 +6772,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "74HC595"
 			(at 254 41.91 0)
 			(effects
@@ -6931,6 +7039,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 43.18 161.2899 0)
 			(effects
@@ -7001,6 +7118,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 213.36 167.6399 0)
 			(effects
@@ -7070,6 +7196,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 167.64 68.58 0)
 			(effects
@@ -7150,6 +7285,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 123.19 45.72 0)
 			(effects
@@ -7363,6 +7507,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "74HC595"
 			(at 254 109.982 0)
 			(effects
@@ -7822,6 +7975,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 123.19 68.58 0)
 			(effects
@@ -8102,6 +8264,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 279.4 44.4499 0)
 			(effects
@@ -8439,6 +8610,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 31.75 67.31 0)
 			(effects
@@ -8585,6 +8765,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 51.054 166.878 90)
 			(effects
@@ -8720,6 +8909,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 35.814 171.958 0)
 			(effects
@@ -9124,6 +9322,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 31.75 116.84 0)
 			(effects
@@ -9339,6 +9546,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 µF 10V X5R"
 			(at 92.71 153.6699 0)
 			(effects
@@ -9408,6 +9624,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 123.19 118.11 0)
 			(effects
@@ -9555,6 +9780,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 123.19 92.71 0)
 			(effects
@@ -9769,6 +10003,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 77.47 67.31 0)
 			(effects
@@ -9849,6 +10092,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 167.64 92.71 0)
 			(effects
@@ -10398,6 +10650,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SPI Expansion 2.54mm"
 			(at 167.64 45.72 0)
 			(effects
@@ -10678,6 +10939,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 222.25 50.8 90)
 			(effects
@@ -10880,6 +11150,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "BMI270"
 			(at 167.64 154.94 0)
 			(effects

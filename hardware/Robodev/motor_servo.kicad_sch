@@ -3434,6 +3434,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 147.32 0)
 			(effects
@@ -3843,6 +3852,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 78.74 38.1 90)
 			(effects
@@ -3911,6 +3929,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 157.48 0)
 			(effects
@@ -3982,6 +4009,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 125.73 0)
 			(effects
@@ -4186,6 +4222,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 116.8399 0)
 			(effects
@@ -4259,6 +4304,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 165.1 60.96 90)
 			(effects
@@ -4328,6 +4382,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 137.1599 0)
 			(effects
@@ -4401,6 +4464,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "4.7 kΩ 1% 0603"
 			(at 171.45 44.4499 0)
 			(effects
@@ -4470,6 +4542,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 63.5 40.64 90)
 			(effects
@@ -4539,6 +4620,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 50V X7R"
 			(at 166.37 139.6999 0)
 			(effects
@@ -4675,6 +4765,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 115.57 0)
 			(effects
@@ -4812,6 +4911,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 158.7499 0)
 			(effects
@@ -4885,6 +4993,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 µF 10V X5R"
 			(at 166.37 33.0199 0)
 			(effects
@@ -5153,6 +5270,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 171.45 53.34 90)
 			(effects
@@ -5491,6 +5617,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 92.71 35.56 90)
 			(effects
@@ -5560,6 +5695,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 168.9099 0)
 			(effects
@@ -5768,6 +5912,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "4.7 kΩ 1% 0603"
 			(at 193.04 45.7199 0)
 			(effects
@@ -5968,6 +6121,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 177.8 0)
 			(effects
@@ -6039,6 +6201,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 49.53 43.18 90)
 			(effects
@@ -6108,6 +6279,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "220 µF 25V electrolytic"
 			(at 151.13 138.8109 0)
 			(effects
@@ -6245,6 +6425,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 126.9999 0)
 			(effects
@@ -6317,6 +6506,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 167.64 0)
 			(effects
@@ -6455,6 +6653,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 105.41 0)
 			(effects
@@ -6527,6 +6734,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 106.6799 0)
 			(effects
@@ -6733,6 +6949,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "PCA9685PW"
 			(at 116.84 34.29 0)
 			(effects
@@ -6980,6 +7205,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 68.072 135.89 0)
 			(effects
@@ -7187,6 +7421,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 179.0699 0)
 			(effects
@@ -7260,6 +7503,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x03"
 			(at 44.45 148.5899 0)
 			(effects
@@ -7333,6 +7585,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 151.13 33.0199 0)
 			(effects
@@ -7469,6 +7730,15 @@
 				)
 			)
 		)
+			(property "Board" "power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 35.56 45.72 90)
 			(effects

@@ -5902,6 +5902,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 55.88 213.3599 0)
 			(effects
@@ -5971,6 +5980,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "MJTP1230"
 			(at 114.3 203.2 0)
 			(effects
@@ -6176,6 +6194,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "MJTP1230"
 			(at 31.75 212.0899 90)
 			(effects
@@ -6581,6 +6608,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SN65HVD230D"
 			(at 325.12 147.32 0)
 			(effects
@@ -6950,6 +6986,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 226.06 212.0899 0)
 			(effects
@@ -7020,6 +7065,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "SWD Debug 2.54mm"
 			(at 170.18 214.6299 0)
 			(effects
@@ -7096,6 +7150,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Encoder 2 2.54mm"
 			(at 46.99 257.8099 0)
 			(effects
@@ -7438,6 +7501,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 347.98 149.8599 0)
 			(effects
@@ -7575,6 +7647,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 88.9 215.8999 0)
 			(effects
@@ -7710,6 +7791,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "4.7 µF 10V X5R"
 			(at 144.78 57.15 90)
 			(effects
@@ -7778,6 +7868,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 183.642 58.166 90)
 			(effects
@@ -7846,6 +7945,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 161.29 41.91 0)
 			(effects
@@ -8114,6 +8222,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "USB4085-GF-A"
 			(at 321.31 76.1999 0)
 			(effects
@@ -8510,6 +8627,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "CAN Bus 5.08mm"
 			(at 374.65 160.0199 0)
 			(effects
@@ -8714,6 +8840,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "ADC Header 2.54mm"
 			(at 276.86 200.6601 0)
 			(effects
@@ -8854,6 +8989,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 106.68 72.3899 0)
 			(effects
@@ -8924,6 +9068,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "UART Debug 2.54mm"
 			(at 327.66 217.1699 0)
 			(effects
@@ -9000,6 +9153,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "120 Ω 1% 0603"
 			(at 350.52 160.0199 0)
 			(effects
@@ -9204,6 +9366,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "1 µF 10V X5R"
 			(at 212.09 59.6899 0)
 			(effects
@@ -9409,6 +9580,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 201.93 212.0899 0)
 			(effects
@@ -9610,6 +9790,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "STM32G431RBTx"
 			(at 171.0533 170.18 0)
 			(effects
@@ -9867,6 +10056,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 nF 10V X7R"
 			(at 227.33 59.6899 0)
 			(effects
@@ -10002,6 +10200,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 144.78 33.274 0)
 			(effects
@@ -10069,6 +10276,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 138.176 64.008 90)
 			(effects
@@ -10406,6 +10622,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 172.72 43.1799 0)
 			(effects
@@ -10476,6 +10701,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "ADC Header 2.54mm"
 			(at 276.86 220.9801 0)
 			(effects
@@ -10679,6 +10913,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Encoder 1 2.54mm"
 			(at 82.55 257.8099 0)
 			(effects
@@ -10954,6 +11197,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "GPIO Header 2.54mm"
 			(at 130.81 256.5399 0)
 			(effects
@@ -11362,6 +11614,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "UART General 2.54mm"
 			(at 375.92 215.8999 0)
 			(effects
@@ -11438,6 +11699,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "ADC Header 2.54mm"
 			(at 276.86 210.8201 0)
 			(effects
@@ -11511,6 +11781,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "1 µF 10V X5R"
 			(at 88.9 72.3899 0)
 			(effects

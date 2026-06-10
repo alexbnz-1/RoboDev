@@ -4645,6 +4645,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 200.66 165.1 0)
 			(effects
@@ -4920,6 +4929,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x08_F"
 			(at 358.14 91.44 90)
 			(effects
@@ -5141,6 +5159,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "QWIIC I2C 2.54mm Header"
 			(at 52.07 125.73 0)
 			(effects
@@ -5415,6 +5442,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 277.876 70.104 90)
 			(effects
@@ -5551,6 +5587,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 86.36 144.78 0)
 			(effects
@@ -5826,6 +5871,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 171.45 125.73 0)
 			(effects
@@ -5900,6 +5954,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "ADS1115IDGST"
 			(at 63.5 220.98 0)
 			(effects
@@ -6141,6 +6204,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "QWIIC I2C 2.54mm Header"
 			(at 87.63 105.41 0)
 			(effects
@@ -6551,6 +6623,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 204.47 109.22 0)
 			(effects
@@ -6626,6 +6707,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 175.26 31.7499 0)
 			(effects
@@ -6762,6 +6852,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 267.97 63.5 90)
 			(effects
@@ -7030,6 +7129,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 171.45 144.78 0)
 			(effects
@@ -7104,6 +7212,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "TCA9548APWR"
 			(at 195.58 24.13 0)
 			(effects
@@ -7493,6 +7610,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 90.17 223.5199 0)
 			(effects
@@ -7563,6 +7689,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x04"
 			(at 271.78 22.8599 0)
 			(effects
@@ -7639,6 +7774,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 52.07 144.78 0)
 			(effects
@@ -7847,6 +7991,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "PCF8574DW"
 			(at 311.15 57.15 0)
 			(effects
@@ -8173,6 +8326,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 170.18 163.83 0)
 			(effects
@@ -8449,6 +8611,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 290.83 58.4199 0)
 			(effects
@@ -8519,6 +8690,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 335.28 59.6899 0)
 			(effects
@@ -8656,6 +8836,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 85.09 166.37 0)
 			(effects
@@ -8930,6 +9119,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x08F"
 			(at 358.648 114.808 90)
 			(effects
@@ -9018,6 +9216,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 50.8 165.1 0)
 			(effects
@@ -9093,6 +9300,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 99.06 25.3999 0)
 			(effects
@@ -9297,6 +9513,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "QWIIC I2C 2.54mm Header"
 			(at 52.07 105.41 0)
 			(effects
@@ -9504,6 +9729,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "TCA9548APWR"
 			(at 74.93 22.86 0)
 			(effects
@@ -9759,6 +9993,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 kΩ 1% 0603"
 			(at 267.97 78.74 90)
 			(effects
@@ -9895,6 +10138,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 201.93 144.78 0)
 			(effects
@@ -10104,6 +10356,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "100 nF 10V X7R"
 			(at 220.98 26.6699 0)
 			(effects
@@ -10375,6 +10636,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 203.2 127 0)
 			(effects
@@ -10449,6 +10719,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "Conn_01x08F"
 			(at 358.648 69.85 90)
 			(effects
@@ -10537,6 +10816,15 @@
 				(justify left)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "10 kΩ 1% 0603"
 			(at 54.61 30.4799 0)
 			(effects
@@ -10741,6 +11029,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "QWIIC I2C 2.54mm Header"
 			(at 87.63 125.73 0)
 			(effects
@@ -10883,6 +11180,15 @@
 				)
 			)
 		)
+			(property "Board" "main"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
 		(property "Value" "I2C 2.54mm Header"
 			(at 173.99 107.95 0)
 			(effects
