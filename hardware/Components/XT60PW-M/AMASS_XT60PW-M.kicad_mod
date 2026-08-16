@@ -267,7 +267,7 @@
 		(uuid "f54bc03c-66e5-47c4-8474-e5d708e22fd7")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/XT60PW-M/XT60PW-M.step"
+	(model "${KIPRJMOD}/../Components/XT60PW-M/XT60PW-M.step"
 		(offset
 			(xyz 0 0 0)
 		)

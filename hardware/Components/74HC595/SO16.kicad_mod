@@ -427,7 +427,7 @@
 		(uuid "68ca1a8e-62c4-4b2f-b63c-ab78017d37d5")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/74HC595/74HC595.step"
+	(model "${KIPRJMOD}/../Components/74HC595/74HC595.step"
 		(offset
 			(xyz 0 0 0)
 		)

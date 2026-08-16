@@ -331,7 +331,7 @@
 		(uuid "a743d5f5-63d5-42e1-af4f-7f087ec48a89")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/BMI270/BMI270.step"
+	(model "${KIPRJMOD}/../Components/BMI270/BMI270.step"
 		(offset
 			(xyz 0 0 0)
 		)

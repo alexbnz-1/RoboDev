@@ -237,7 +237,7 @@
 		(uuid "2ef8e388-0b71-4083-bfbe-84cd2e3f01cf")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/SN65HVD230D/SN65HVD230D.step"
+	(model "${KIPRJMOD}/../Components/SN65HVD230D/SN65HVD230D.step"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -207,7 +207,7 @@
 		(uuid "b84d30b9-03cc-4848-94e3-588aa7b2b733")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/MJTP1230/MJTP1230.stp"
+	(model "${KIPRJMOD}/../Components/MJTP1230/MJTP1230.stp"
 		(offset
 			(xyz 0 0 0)
 		)

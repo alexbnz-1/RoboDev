@@ -301,7 +301,7 @@
 		(uuid "eafb7952-74de-4369-bcf6-792c9477a007")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/PCF8574DW/PCF8574DW.step"
+	(model "${KIPRJMOD}/../Components/PCF8574DW/PCF8574DW.step"
 		(offset
 			(xyz 0 0 0)
 		)

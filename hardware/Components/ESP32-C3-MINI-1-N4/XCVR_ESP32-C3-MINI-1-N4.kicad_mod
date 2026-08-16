@@ -777,7 +777,7 @@
 		)
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/ESP32-C3-MINI-1-N4/ESP32-C3-MINI-1-N4.step"
+	(model "${KIPRJMOD}/../Components/ESP32-C3-MINI-1-N4/ESP32-C3-MINI-1-N4.step"
 		(offset
 			(xyz 0 -2.5 0)
 		)

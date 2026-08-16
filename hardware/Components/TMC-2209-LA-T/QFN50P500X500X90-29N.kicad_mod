@@ -476,7 +476,7 @@
 		(uuid "0765bd72-4cfb-4895-8168-b642f8e1245e")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/TMC-2209-LA-T/TMC2209-LA-T.step"
+	(model "${KIPRJMOD}/../Components/TMC-2209-LA-T/TMC2209-LA-T.step"
 		(offset
 			(xyz 0 0 0)
 		)

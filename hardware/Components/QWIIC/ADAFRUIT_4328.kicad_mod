@@ -245,7 +245,7 @@
 		(uuid "fbf32009-9209-47ee-8e27-2f07b81204f5")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/QWIIC/4328.step"
+	(model "${KIPRJMOD}/../Components/QWIIC/4328.step"
 		(offset
 			(xyz 0 0 0)
 		)

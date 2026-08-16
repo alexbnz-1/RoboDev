@@ -220,7 +220,7 @@
 		(uuid "f07750d0-12ec-4ecf-8bc4-4adf14026b75")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/MBR2045CT/MBR2045CT.step"
+	(model "${KIPRJMOD}/../Components/MBR2045CT/MBR2045CT.step"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -253,7 +253,7 @@
 		(uuid "99363a69-ed11-4791-959c-9c261b159f66")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/ADS1115IDGST/ADS1115IDGST.step"
+	(model "${KIPRJMOD}/../Components/ADS1115IDGST/ADS1115IDGST.step"
 		(offset
 			(xyz 0 0 0)
 		)

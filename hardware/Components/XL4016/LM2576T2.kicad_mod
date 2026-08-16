@@ -275,7 +275,7 @@
 		(uuid "cf318e00-624a-4b8d-9d15-2cc933bcb675")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/XL4016/XL4016.step"
+	(model "${KIPRJMOD}/../Components/XL4016/XL4016.step"
 		(offset
 			(xyz 0 -8.5 -4)
 		)

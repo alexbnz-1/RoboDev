@@ -365,7 +365,7 @@
 		(uuid "b4b945b1-ce75-4b13-a8da-25189c4c9d1e")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/TCA9548A/TCA9548APWR.step"
+	(model "${KIPRJMOD}/../Components/TCA9548A/TCA9548APWR.step"
 		(offset
 			(xyz 0 0 0)
 		)

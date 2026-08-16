@@ -320,7 +320,7 @@
 		(uuid "62a7a1f1-2a72-4347-ae0e-c71e95437be0")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/PCA9685PW/PCA9685PW,118.STEP"
+	(model "${KIPRJMOD}/../Components/PCA9685PW/PCA9685PW,118.STEP"
 		(offset
 			(xyz 0 0 0)
 		)

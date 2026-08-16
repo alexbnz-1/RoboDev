@@ -320,7 +320,7 @@
 		(uuid "a92c08c3-df71-4179-8199-bcd6be351b88")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/DRV8874/DRV8874PWPR.step"
+	(model "${KIPRJMOD}/../Components/DRV8874/DRV8874PWPR.step"
 		(offset
 			(xyz 0 0 0)
 		)

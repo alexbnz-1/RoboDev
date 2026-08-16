@@ -414,7 +414,7 @@
 		(uuid "5dd8456c-e92e-4f70-a5e0-db58a1e690db")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/jwe116/OneDrive - University of Canterbury/Robodev/Components/USB4085GFA/USB4085-GF-A.step"
+	(model "${KIPRJMOD}/../Components/USB4085GFA/USB4085-GF-A.step"
 		(offset
 			(xyz 0 0 0)
 		)
